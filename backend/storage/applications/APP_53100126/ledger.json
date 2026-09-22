@@ -1,0 +1,359 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790052740.5325465,
+    "formatted_time": "10:22:20",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_6007b8aa8c30",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "39fc230621dd28441207ae21d2ea11a82bb18fe03ea92c12e643c0ae8845acaa"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790052741.6783857,
+    "formatted_time": "10:22:21",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 2
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "full_name",
+            "field_label": "Full Name",
+            "candidates": [
+              {
+                "value": "M Vinayaka",
+                "source_file": "my_aadhaar.jpeg",
+                "source_page": 1,
+                "evidence_text": "M Vinayaka cto",
+                "confidence": 0.98
+              },
+              {
+                "value": "Rahul Melavanki",
+                "source_file": "my_income.pdf",
+                "source_page": 1,
+                "evidence_text": "Sri Rahul Melavanki, son of",
+                "confidence": 0.98
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in my_aadhaar.jpeg vs 'Rahul Melavanki' in my_income.pdf. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": "24/08/2007",
+          "status": "VERIFIED",
+          "source_file": "my_aadhaar.jpeg",
+          "source_page": 1,
+          "evidence_text": "DOB: 24/08/2007",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "my_aadhaar.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "my_aadhaar.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": "240000",
+          "status": "VERIFIED",
+          "source_file": "my_income.pdf",
+          "source_page": 1,
+          "evidence_text": "Certified Annual Family Income: Rs. 2,40,000",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "my_aadhaar.jpeg",
+          "status": "VERIFIED",
+          "source_file": "my_aadhaar.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: my_aadhaar.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": "my_income.pdf",
+          "status": "VERIFIED",
+          "source_file": "my_income.pdf",
+          "source_page": 1,
+          "evidence_text": "Matched document file: my_income.pdf",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "full_name",
+          "field_label": "Full Name",
+          "candidates": [
+            {
+              "value": "M Vinayaka",
+              "source_file": "my_aadhaar.jpeg",
+              "source_page": 1,
+              "evidence_text": "M Vinayaka cto",
+              "confidence": 0.98
+            },
+            {
+              "value": "Rahul Melavanki",
+              "source_file": "my_income.pdf",
+              "source_page": 1,
+              "evidence_text": "Sri Rahul Melavanki, son of",
+              "confidence": 0.98
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in my_aadhaar.jpeg vs 'Rahul Melavanki' in my_income.pdf. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        }
+      ],
+      "unresolved_conflicts_count": 1
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "39fc230621dd28441207ae21d2ea11a82bb18fe03ea92c12e643c0ae8845acaa",
+    "entry_hash": "24826cb5f84df75496ec0303a9f00bd07b12dc0a259a75bdaf0f28d6a236419b"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_MY_AADHAAR.JPEG",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790052741.8783486,
+    "formatted_time": "10:22:21",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "my_aadhaar.jpeg",
+      "converted": "my_aadhaar.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_53100126\\my_aadhaar.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_53100126\\my_aadhaar.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 200.61,
+      "final_size_kb": 247.7,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "24826cb5f84df75496ec0303a9f00bd07b12dc0a259a75bdaf0f28d6a236419b",
+    "entry_hash": "046cc8e7d641e665700859e090eba3249cea28c229c39fe3a11a3e2883d65aef"
+  },
+  {
+    "step_id": "ADAPT_COMPRESS_MY_INCOME.PDF",
+    "action": "Self-Healing Document Adaptation: PDF Compression",
+    "actor": "document_engine",
+    "timestamp": 1790052742.0275714,
+    "formatted_time": "10:22:22",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "initial_size_kb": 5863.78,
+      "final_size_kb": 71.62
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_53100126\\my_income.pdf",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_53100126\\compressed_my_income.pdf",
+      "initial_size_kb": 5863.78,
+      "final_size_kb": 71.62,
+      "target_kb": 1900,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "046cc8e7d641e665700859e090eba3249cea28c229c39fe3a11a3e2883d65aef",
+    "entry_hash": "7bd4bacd60e8cc0475c88e9421f369e5111f4551681fd0309298a82be89606db"
+  }
+]

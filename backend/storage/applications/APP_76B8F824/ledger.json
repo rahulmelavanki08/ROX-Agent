@@ -1,0 +1,48 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790050485.1364405,
+    "formatted_time": "09:44:45",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_cedf082b651c",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "6adeda4d16c36cf013f4e013d91db6f2f6b14c2fe1cbb41afee64196f68a92cc"
+  },
+  {
+    "step_id": "UPDATE_FULL_NAME",
+    "action": "User Direct Field Input: full_name",
+    "actor": "user",
+    "timestamp": 1790050485.1477463,
+    "formatted_time": "09:44:45",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "field_id": "full_name",
+      "value": "Ananya Sharma",
+      "source": "User Direct Input"
+    },
+    "status": "USER_UPDATED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "6adeda4d16c36cf013f4e013d91db6f2f6b14c2fe1cbb41afee64196f68a92cc",
+    "entry_hash": "b2c864c6261ed888130d1ec897b27b82b3067fe0c033fb7d69826ed6929838fa"
+  }
+]

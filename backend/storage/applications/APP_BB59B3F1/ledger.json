@@ -1,0 +1,712 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790059162.6704788,
+    "formatted_time": "12:09:22",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_aa69f02024dd",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "7761cccad876d3b2dc9824cfd8539555568d0fa66a4ee09615ca797357ac3288"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790059363.2927918,
+    "formatted_time": "12:12:43",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 5,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "full_name",
+            "field_label": "Full Name",
+            "candidates": [
+              {
+                "value": "M Vinayaka",
+                "source_file": "adharcard.jpeg",
+                "source_page": 1,
+                "evidence_text": "M Vinayaka cto",
+                "confidence": 0.98
+              },
+              {
+                "value": "M Veeresh",
+                "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+                "source_page": 1,
+                "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+                "confidence": 0.96
+              },
+              {
+                "value": "M VINAYAKA",
+                "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+                "source_page": 1,
+                "evidence_text": "Kumar. M VINAYAKA sto",
+                "confidence": 0.98
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "dob": {
+          "field_id": "dob",
+          "label": "Date of Birth",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "aadhaar_number": {
+          "field_id": "aadhaar_number",
+          "label": "Aadhaar Card Number",
+          "value": "4511 9765 8922",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "4511 9765 8922",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Category",
+          "value": "Category 1 1 (B)",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Category 1 1 (B)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "mobile": {
+          "field_id": "mobile",
+          "label": "Mobile Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "permanent_address": {
+          "field_id": "permanent_address",
+          "label": "Permanent Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "state": {
+          "field_id": "state",
+          "label": "State",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "pincode": {
+          "field_id": "pincode",
+          "label": "Pincode",
+          "value": "583131",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "583131",
+          "confidence": 0.97,
+          "conflict_details": null
+        },
+        "current_course": {
+          "field_id": "current_course",
+          "label": "Current Course / Class",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "School / College / Institute Name",
+          "value": "V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAYANAGARA.S83131",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME AND ADDRESS: V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "previous_marks": {
+          "field_id": "previous_marks",
+          "label": "Previous Year Percentage / CGPA",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "passing_year": {
+          "field_id": "passing_year",
+          "label": "Year of Passing Previous Class",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_income": {
+          "field_id": "annual_income",
+          "label": "Annual Family Income (INR)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Bank Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "Bank IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "Canara Bank",
+          "status": "VERIFIED",
+          "source_file": "bankpassbook.jpeg",
+          "source_page": 1,
+          "evidence_text": "Canara Bank",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "photo": {
+          "field_id": "photo",
+          "label": "Applicant Photograph",
+          "value": "photo.jpeg",
+          "status": "VERIFIED",
+          "source_file": "photo.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: photo.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "income_certificate": {
+          "field_id": "income_certificate",
+          "label": "Income Certificate",
+          "value": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "marksheet": {
+          "field_id": "marksheet",
+          "label": "Previous Year Marksheet",
+          "value": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_passbook": {
+          "field_id": "bank_passbook",
+          "label": "Bank Passbook / Cancelled Cheque",
+          "value": "bankpassbook.jpeg",
+          "status": "VERIFIED",
+          "source_file": "bankpassbook.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: bankpassbook.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "aadhaar_card": {
+          "field_id": "aadhaar_card",
+          "label": "Aadhaar Card Copy",
+          "value": "adharcard.jpeg",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: adharcard.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date Of Birth",
+          "value": "24/08/2007",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "DOB: 24/08/2007",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Phone Number",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Roll Number",
+          "value": "25614662",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "25614662",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "Tenth Percentage",
+          "value": "83.04",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "(83.04%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "address": {
+          "field_id": "address",
+          "label": "Address",
+          "value": "7TH WARD MEGALAPETE , HARAPANAHALLI TQ , , 5831.31 of ( ward 7) Village/Ward, Kasaba Hobli, HARAPPANAHALLI Taluk, VI.IAVANAGARA",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "residing at 7TH WARD MEGALAPETE , HARAPANAHALLI TQ , , 5831.31 of ( ward 7) Village/Ward, Kasaba Hob",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "certificate_number": {
+          "field_id": "certificate_number",
+          "label": "Certificate Number",
+          "value": "RD1218563068593",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "RD1218563068593",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "issue_date": {
+          "field_id": "issue_date",
+          "label": "Issue Date",
+          "value": "06/11/2024",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Date: 06/11/2024",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "father_name": {
+          "field_id": "father_name",
+          "label": "Father Name",
+          "value": "M PRAKASH",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "sto Sri. M PRAKASH(Father Name)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "mother_name": {
+          "field_id": "mother_name",
+          "label": "Mother Name",
+          "value": "M",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Smt. M (Mother Name)",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "taluk": {
+          "field_id": "taluk",
+          "label": "Taluk",
+          "value": "HARAPPANAHALLI",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "HARAPPANAHALLI Taluk",
+          "confidence": 0.96,
+          "conflict_details": null
+        },
+        "district": {
+          "field_id": "district",
+          "label": "District",
+          "value": "VIJAYANAGARA",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "VIJAYANAGARA District",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "caste": {
+          "field_id": "caste",
+          "label": "Caste",
+          "value": "Veerashaiva Lingayat",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "belongs to caste Veerashaiva Lingayat",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income",
+          "value": "50000",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "annual income is Rs. 50000",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "issuing_authority": {
+          "field_id": "issuing_authority",
+          "label": "Issuing Authority",
+          "value": "NATARAJ J",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Name: NATARAJ J Tahsildar",
+          "confidence": 0.97,
+          "conflict_details": null
+        },
+        "image_file": {
+          "field_id": "image_file",
+          "label": "Image File",
+          "value": "photo.jpeg. Dimensions: 1334x1600, format: JPEG",
+          "status": "LIKELY",
+          "source_file": "photo.jpeg",
+          "source_page": 1,
+          "evidence_text": "Image file: photo.jpeg. Dimensions: 1334x1600, format: JPEG",
+          "confidence": 0.9,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "date_of_birth",
+          "field_label": "Date of Birth",
+          "candidates": [
+            {
+              "value": "24/08/2007",
+              "source_file": "adharcard.jpeg",
+              "source_page": 1,
+              "evidence_text": "DOB: 24/08/2007",
+              "confidence": 0.99
+            },
+            {
+              "value": "18/08/2009",
+              "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+              "source_page": 1,
+              "evidence_text": "EIGHTEENTH.AUGUST. TWO THOUSAND NINE",
+              "confidence": 0.98
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: '24/08/2007' in adharcard.jpeg vs '18/08/2009' in WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg. These documents contain conflicting records for critical field 'Date of Birth'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        },
+        {
+          "field_id": "full_name",
+          "field_label": "Full Name",
+          "candidates": [
+            {
+              "value": "M Vinayaka",
+              "source_file": "adharcard.jpeg",
+              "source_page": 1,
+              "evidence_text": "M Vinayaka cto",
+              "confidence": 0.98
+            },
+            {
+              "value": "M Veeresh",
+              "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+              "source_page": 1,
+              "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+              "confidence": 0.96
+            },
+            {
+              "value": "M VINAYAKA",
+              "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+              "source_page": 1,
+              "evidence_text": "Kumar. M VINAYAKA sto",
+              "confidence": 0.98
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        }
+      ],
+      "unresolved_conflicts_count": 2
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "7761cccad876d3b2dc9824cfd8539555568d0fa66a4ee09615ca797357ac3288",
+    "entry_hash": "f6ef75c41bfa6162888a2ebc87a8daea101432d8ceb806ee8899dc3219934e4b"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_ADHARCARD.JPEG",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790059444.5211587,
+    "formatted_time": "12:14:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "adharcard.jpeg",
+      "converted": "adharcard.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\adharcard.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\adharcard.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 200.61,
+      "final_size_kb": 247.69,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "f6ef75c41bfa6162888a2ebc87a8daea101432d8ceb806ee8899dc3219934e4b",
+    "entry_hash": "6a02accbd697637abb7d7d17cc6be4276fed466b37a45408ce8fe96834892ff1"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790059444.5316885,
+    "formatted_time": "12:14:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+      "converted": "WhatsApp Image 2026-09-17 at 11.35.46 PM.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\WhatsApp Image 2026-09-17 at 11.35.46 PM.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 99.03,
+      "final_size_kb": 127.93,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "6a02accbd697637abb7d7d17cc6be4276fed466b37a45408ce8fe96834892ff1",
+    "entry_hash": "cda4a590129a0babb13d4a412d9534800dd7ee6d928a31f080045ca833a18874"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790059444.5473394,
+    "formatted_time": "12:14:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+      "converted": "WhatsApp Image 2026-09-17 at 2.38.15 PM.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\WhatsApp Image 2026-09-17 at 2.38.15 PM.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 124.84,
+      "final_size_kb": 156.41,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "cda4a590129a0babb13d4a412d9534800dd7ee6d928a31f080045ca833a18874",
+    "entry_hash": "777c0097ace94a5ddea5f767e93fcd12a16cfd5aa5945e0440362356190e2ec9"
+  },
+  {
+    "step_id": "ADAPT_IMAGE_PHOTO.JPEG",
+    "action": "Self-Healing Document Adaptation: Image Format & Resize",
+    "actor": "document_engine",
+    "timestamp": 1790059444.5745735,
+    "formatted_time": "12:14:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "photo.jpeg",
+      "converted": "photo.jpg"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\photo.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\photo.jpg",
+      "verified": true,
+      "output_format": "JPEG",
+      "dimensions": {
+        "width": 200,
+        "height": 230
+      },
+      "file_size_kb": 11.86,
+      "quality_applied": 90
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "777c0097ace94a5ddea5f767e93fcd12a16cfd5aa5945e0440362356190e2ec9",
+    "entry_hash": "050fdac197292c6f5a983e50c2a27c35cf009ebaef394b9ce8729b0f6b54d4b8"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_BANKPASSBOOK.JPEG",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790059444.5819569,
+    "formatted_time": "12:14:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "bankpassbook.jpeg",
+      "converted": "bankpassbook.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\bankpassbook.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_BB59B3F1\\bankpassbook.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 50.25,
+      "final_size_kb": 64.15,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "050fdac197292c6f5a983e50c2a27c35cf009ebaef394b9ce8729b0f6b54d4b8",
+    "entry_hash": "34a9ff6edbca011b4b16b95809bc25f7c5873e832821d5f3ee796569fa3a0868"
+  }
+]

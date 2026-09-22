@@ -1,0 +1,362 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790015344.452983,
+    "formatted_time": "23:59:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_88c14a43952e",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "1d10f170c64ee7ae24e84b43ed7cad5c1f5ed19704510487760f6593499aa530"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790015344.6976435,
+    "formatted_time": "23:59:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": "Rahul Melavanki",
+          "status": "VERIFIED",
+          "source_file": "aadhaar.pdf",
+          "source_page": 1,
+          "evidence_text": "Name / Naam: Rahul Melavanki",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "date_of_birth",
+            "field_label": "Date of Birth",
+            "candidates": [
+              {
+                "value": "14/05/2007",
+                "source_file": "aadhaar.pdf",
+                "source_page": 1,
+                "evidence_text": "Date of Birth / Janma Dina: 14/05/2007",
+                "confidence": 0.98
+              },
+              {
+                "value": "15/05/2007",
+                "source_file": "marksheet.pdf",
+                "source_page": 1,
+                "evidence_text": "Birth Date: 15/05/2007",
+                "confidence": 0.98
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Conflicting values detected across 2 documents for critical field 'Date of Birth'. Zero-trust gate blocks automatic resolution."
+          }
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "aadhaar.pdf",
+          "source_page": 1,
+          "evidence_text": "Male",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": "General",
+          "status": "VERIFIED",
+          "source_file": "aadhaar.pdf",
+          "source_page": 1,
+          "evidence_text": "Category: General",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": "National Institute of Technology",
+          "status": "VERIFIED",
+          "source_file": "marksheet.pdf",
+          "source_page": 1,
+          "evidence_text": "National Institute of Technology",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": "NITK2024CS089",
+          "status": "VERIFIED",
+          "source_file": "marksheet.pdf",
+          "source_page": 1,
+          "evidence_text": "Registration / Roll No: NITK2024CS089",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": "92.4",
+          "status": "VERIFIED",
+          "source_file": "marksheet.pdf",
+          "source_page": 1,
+          "evidence_text": "10th Standard Aggregate: 92.4%",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": "89.6",
+          "status": "VERIFIED",
+          "source_file": "marksheet.pdf",
+          "source_page": 1,
+          "evidence_text": "12th / Pre-University Aggregate: 89.6%",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": "240000",
+          "status": "VERIFIED",
+          "source_file": "income_certificate.pdf",
+          "source_page": 1,
+          "evidence_text": "Certified Annual Family Income: Rs. 2,40,000",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "State Bank Of India",
+          "status": "VERIFIED",
+          "source_file": "bank_passbook.pdf",
+          "source_page": 1,
+          "evidence_text": "STATE BANK OF INDIA",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": "39485729104",
+          "status": "VERIFIED",
+          "source_file": "bank_passbook.pdf",
+          "source_page": 1,
+          "evidence_text": "Account Number: 39485729104",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": "SBIN0001423",
+          "status": "VERIFIED",
+          "source_file": "bank_passbook.pdf",
+          "source_page": 1,
+          "evidence_text": "IFSC Code: SBIN0001423",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "aadhaar.pdf",
+          "status": "VERIFIED",
+          "source_file": "aadhaar.pdf",
+          "source_page": 1,
+          "evidence_text": "Matched document file: aadhaar.pdf",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "marksheet.pdf",
+          "status": "VERIFIED",
+          "source_file": "marksheet.pdf",
+          "source_page": 1,
+          "evidence_text": "Matched document file: marksheet.pdf",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": "income_certificate.pdf",
+          "status": "VERIFIED",
+          "source_file": "income_certificate.pdf",
+          "source_page": 1,
+          "evidence_text": "Matched document file: income_certificate.pdf",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": "photo.png",
+          "status": "VERIFIED",
+          "source_file": "photo.png",
+          "source_page": 1,
+          "evidence_text": "Matched document file: photo.png",
+          "confidence": 0.98,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "date_of_birth",
+          "field_label": "Date of Birth",
+          "candidates": [
+            {
+              "value": "14/05/2007",
+              "source_file": "aadhaar.pdf",
+              "source_page": 1,
+              "evidence_text": "Date of Birth / Janma Dina: 14/05/2007",
+              "confidence": 0.98
+            },
+            {
+              "value": "15/05/2007",
+              "source_file": "marksheet.pdf",
+              "source_page": 1,
+              "evidence_text": "Birth Date: 15/05/2007",
+              "confidence": 0.98
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Conflicting values detected across 2 documents for critical field 'Date of Birth'. Zero-trust gate blocks automatic resolution."
+        }
+      ],
+      "unresolved_conflicts_count": 1
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "1d10f170c64ee7ae24e84b43ed7cad5c1f5ed19704510487760f6593499aa530",
+    "entry_hash": "9d62a1a7c05f914d20bfd3f8010818f55c919bb9fa81e52f536a5df3c4a6ce45"
+  },
+  {
+    "step_id": "ADAPT_COMPRESS_INCOME_CERTIFICATE.PDF",
+    "action": "Self-Healing Document Adaptation: PDF Compression",
+    "actor": "document_engine",
+    "timestamp": 1790015344.819801,
+    "formatted_time": "23:59:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "initial_size_kb": 5863.78,
+      "final_size_kb": 71.63
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_2E221B08\\income_certificate.pdf",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_2E221B08\\compressed_income_certificate.pdf",
+      "initial_size_kb": 5863.78,
+      "final_size_kb": 71.63,
+      "target_kb": 1900,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "9d62a1a7c05f914d20bfd3f8010818f55c919bb9fa81e52f536a5df3c4a6ce45",
+    "entry_hash": "62621275d332cb1a2f6ec0d011db5f4f36c26d2ce956da39da3b002a5998acb6"
+  },
+  {
+    "step_id": "ADAPT_IMAGE_PHOTO.PNG",
+    "action": "Self-Healing Document Adaptation: Image Format & Resize",
+    "actor": "document_engine",
+    "timestamp": 1790015344.8716187,
+    "formatted_time": "23:59:04",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "photo.png",
+      "converted": "photo.jpg"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_2E221B08\\photo.png",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_2E221B08\\photo.jpg",
+      "verified": true,
+      "output_format": "JPEG",
+      "dimensions": {
+        "width": 200,
+        "height": 230
+      },
+      "file_size_kb": 3.84,
+      "quality_applied": 90
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "62621275d332cb1a2f6ec0d011db5f4f36c26d2ce956da39da3b002a5998acb6",
+    "entry_hash": "4425f7cd9a79cb6413520ededf999fa28aa39026f08a9a2bd54dcdbd30ea66f9"
+  }
+]

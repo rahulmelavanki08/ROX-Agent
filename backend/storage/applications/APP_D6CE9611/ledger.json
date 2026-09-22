@@ -1,0 +1,300 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790052565.988177,
+    "formatted_time": "10:19:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_2b0499cfca99",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "bb03111a32ae08f1d4e872816b5e2c79651c8cdb51e975333d96eff3051f473c"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790052567.8566597,
+    "formatted_time": "10:19:27",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 2
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "full_name",
+            "field_label": "Full Name",
+            "candidates": [
+              {
+                "value": "M Vinayaka",
+                "source_file": "adharcard.jpeg",
+                "source_page": 1,
+                "evidence_text": "M Vinayaka cto",
+                "confidence": 0.98
+              },
+              {
+                "value": "M Veeresh",
+                "source_file": "marksheet.jpeg",
+                "source_page": 1,
+                "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+                "confidence": 0.96
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in marksheet.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": "24/08/2007",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "DOB: 24/08/2007",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": "V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAYANAGARA.S83131",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME AND ADDRESS: V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": "25614662",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "25614662",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": "83.04",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "(83.04%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "adharcard.jpeg",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: adharcard.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "marksheet.jpeg",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: marksheet.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "full_name",
+          "field_label": "Full Name",
+          "candidates": [
+            {
+              "value": "M Vinayaka",
+              "source_file": "adharcard.jpeg",
+              "source_page": 1,
+              "evidence_text": "M Vinayaka cto",
+              "confidence": 0.98
+            },
+            {
+              "value": "M Veeresh",
+              "source_file": "marksheet.jpeg",
+              "source_page": 1,
+              "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+              "confidence": 0.96
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in marksheet.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        }
+      ],
+      "unresolved_conflicts_count": 1
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "bb03111a32ae08f1d4e872816b5e2c79651c8cdb51e975333d96eff3051f473c",
+    "entry_hash": "4e5fa1d8bff558ba2cbededd75d43349d9b664f70293538d0903de381c853e79"
+  }
+]

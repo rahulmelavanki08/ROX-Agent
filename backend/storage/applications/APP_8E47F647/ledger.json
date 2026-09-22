@@ -1,0 +1,495 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790011963.3210227,
+    "formatted_time": "23:02:43",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_0c4695f817a1",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "ba5277301ac72df38e60339567f0c0d2c1845a10e5187a66d2823cb046b399c4"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790012010.1345894,
+    "formatted_time": "23:03:30",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 1
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [],
+      "unresolved_conflicts_count": 0
+    },
+    "status": "AWAITING_APPROVAL",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "ba5277301ac72df38e60339567f0c0d2c1845a10e5187a66d2823cb046b399c4",
+    "entry_hash": "b8fedca87f6995de23553d82a26e1ff135d10bbddbc4eb38c9bc3b78fc6d22db"
+  },
+  {
+    "step_id": "PLAN_APPROVAL",
+    "action": "Plan Approval",
+    "actor": "user",
+    "timestamp": 1790012013.7715745,
+    "formatted_time": "23:03:33",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "modifications": []
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "APPROVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "b8fedca87f6995de23553d82a26e1ff135d10bbddbc4eb38c9bc3b78fc6d22db",
+    "entry_hash": "84e23cbd9a511eec60d015544b97efea4419a641d7d5a571ceae8dd6af61c809"
+  },
+  {
+    "step_id": "ACT_001_PERSONAL",
+    "action": "Fill Personal Information",
+    "actor": "verifier",
+    "timestamp": 1790012013.8024302,
+    "formatted_time": "23:03:33",
+    "preconditions": [
+      "portal_session_active",
+      "all_personal_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Personal Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Personal Details",
+      "session_id": "sess_0c4695f817a1",
+      "data_submitted": {
+        "full_name": null,
+        "date_of_birth": null,
+        "gender": null,
+        "category": null,
+        "email": null,
+        "phone_number": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0c4695f817a1",
+        "step_saved": "Personal Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number"
+        ],
+        "last_updated": 1790012013.8023574
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790012013.8023608
+    },
+    "postconditions": [
+      "status_200_ok",
+      "fields_persisted_in_portal"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number"
+      ],
+      "server_timestamp": 1790012013.8023574,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "84e23cbd9a511eec60d015544b97efea4419a641d7d5a571ceae8dd6af61c809",
+    "entry_hash": "5d54692a876798301a14ecba173440ffead7e77de16080fae63d2f820465a5b5"
+  },
+  {
+    "step_id": "ACT_002_ACADEMIC",
+    "action": "Fill Academic Records",
+    "actor": "verifier",
+    "timestamp": 1790012013.8060632,
+    "formatted_time": "23:03:33",
+    "preconditions": [
+      "portal_session_active",
+      "academic_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Academic Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Academic Details",
+      "session_id": "sess_0c4695f817a1",
+      "data_submitted": {
+        "institution_name": null,
+        "roll_number": null,
+        "tenth_percentage": null,
+        "twelfth_percentage": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0c4695f817a1",
+        "step_saved": "Academic Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage"
+        ],
+        "last_updated": 1790012013.8058503
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790012013.8058543
+    },
+    "postconditions": [
+      "status_200_ok",
+      "academic_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage"
+      ],
+      "server_timestamp": 1790012013.8058503,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "5d54692a876798301a14ecba173440ffead7e77de16080fae63d2f820465a5b5",
+    "entry_hash": "2d27d0a57b75adac4b0cc9d14d3f4af4264762897622fc3b054c3738d6e37988"
+  },
+  {
+    "step_id": "ACT_003_FINANCIAL",
+    "action": "Fill Financial & Bank Information",
+    "actor": "verifier",
+    "timestamp": 1790012013.810734,
+    "formatted_time": "23:03:33",
+    "preconditions": [
+      "portal_session_active",
+      "income_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Financial Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Financial Details",
+      "session_id": "sess_0c4695f817a1",
+      "data_submitted": {
+        "annual_family_income": null,
+        "bank_name": null,
+        "bank_account_number": null,
+        "ifsc_code": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0c4695f817a1",
+        "step_saved": "Financial Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage",
+          "annual_family_income",
+          "bank_name",
+          "bank_account_number",
+          "ifsc_code"
+        ],
+        "last_updated": 1790012013.8106368
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790012013.8106408
+    },
+    "postconditions": [
+      "status_200_ok",
+      "financial_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage",
+        "annual_family_income",
+        "bank_name",
+        "bank_account_number",
+        "ifsc_code"
+      ],
+      "server_timestamp": 1790012013.8106368,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "2d27d0a57b75adac4b0cc9d14d3f4af4264762897622fc3b054c3738d6e37988",
+    "entry_hash": "491eb37da1e73499291096271ba4d402766f93a0d7e2839cf7f8dc3fa84da89d"
+  }
+]

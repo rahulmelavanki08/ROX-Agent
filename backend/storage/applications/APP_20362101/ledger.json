@@ -1,0 +1,403 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790053070.2356439,
+    "formatted_time": "10:27:50",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_35cf6f52984a",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "2eeeeffa6399a1bb4f2ed9cbefec616aa7427924e1ad2c3e3e195b8f6da05a06"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790053248.0404189,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": "Chintiianv Gowda Vasanthakumara S Father",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Name: CHINTIIANV GOWDA VASANTHAKUMARA S Father",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": "15/05/2007",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "15-05-2007 FIFTEENTH",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": "St",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "ST",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": "help@uidai.gov.in",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "help@uidai.gov.in",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": "00000005",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "Reg No: 00000005",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": "95.68",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "(95.68%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "State Bank Of India",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "STATE BANK OF INDIA",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": "SBIN0040069",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "IFSC: SBIN0040069",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [],
+      "unresolved_conflicts_count": 0
+    },
+    "status": "AWAITING_APPROVAL",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "2eeeeffa6399a1bb4f2ed9cbefec616aa7427924e1ad2c3e3e195b8f6da05a06",
+    "entry_hash": "07ba356bd26af90259874343cda962681f4bb3ffceb903feb6b81555dfa3730a"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790053248.1314335,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.27.11.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.27.11.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 238.55,
+      "final_size_kb": 301.5,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "07ba356bd26af90259874343cda962681f4bb3ffceb903feb6b81555dfa3730a",
+    "entry_hash": "b27f4a2e5a2710e339f8e8bfeb6f3c454849599c79b2c41d436b4ea558c36f2d"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790053248.3145075,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.26.29.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.26.29.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 261.76,
+      "final_size_kb": 326.03,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "b27f4a2e5a2710e339f8e8bfeb6f3c454849599c79b2c41d436b4ea558c36f2d",
+    "entry_hash": "754387b262ebd4350359b515bcd34310966c0e2b800506a8db7f5ee200811e13"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790053248.4001753,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.26.30.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.26.30.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 252.48,
+      "final_size_kb": 319.47,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "754387b262ebd4350359b515bcd34310966c0e2b800506a8db7f5ee200811e13",
+    "entry_hash": "629cbce7c196eff90f93ba8ff070f4f8b8ec715709d21db1ac921bc4835751a7"
+  },
+  {
+    "step_id": "ADAPT_IMAGE_WHATSAPP IMAGE 2026-09-22 AT 10.29.12.JPEG",
+    "action": "Self-Healing Document Adaptation: Image Format & Resize",
+    "actor": "document_engine",
+    "timestamp": 1790053248.4187682,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.29.12.jpg"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.29.12.jpg",
+      "verified": true,
+      "output_format": "JPEG",
+      "dimensions": {
+        "width": 200,
+        "height": 230
+      },
+      "file_size_kb": 11.53,
+      "quality_applied": 90
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "629cbce7c196eff90f93ba8ff070f4f8b8ec715709d21db1ac921bc4835751a7",
+    "entry_hash": "b77d9529f3074918a02a8c92b093148aef47da53414cdafc1c231e7bb3cbfb26"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790053248.4826107,
+    "formatted_time": "10:30:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.29.50.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_20362101\\WhatsApp Image 2026-09-22 at 10.29.50.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 157.15,
+      "final_size_kb": 200.34,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "b77d9529f3074918a02a8c92b093148aef47da53414cdafc1c231e7bb3cbfb26",
+    "entry_hash": "6ca041a1717c96cc411846d250e3f4aeccc64d1eaa96a46e7b190edc658a4217"
+  }
+]

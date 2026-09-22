@@ -1,0 +1,1723 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790060577.5901093,
+    "formatted_time": "12:32:57",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_8c7adf5bf8c9",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "c59067a20248b6488c8b4678994ac2c423d3c9def17204c2feaee9116045569a"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790060680.6230693,
+    "formatted_time": "12:34:40",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "full_name",
+            "field_label": "Full Name",
+            "candidates": [
+              {
+                "value": "Chinthm V Gowda",
+                "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+                "source_page": 1,
+                "evidence_text": "Chinthm V Gowda Slo",
+                "confidence": 0.98
+              },
+              {
+                "value": "CHINTIIANV GOWDA VASANTHAKUMARA S",
+                "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+                "source_page": 1,
+                "evidence_text": "Name: CHINTIIANV GOWDA VASANTHAKUMARA S Father's Name : Mother's Name",
+                "confidence": 0.98
+              },
+              {
+                "value": "Mr. Chinthan V Gowda",
+                "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+                "source_page": 1,
+                "evidence_text": "qame: Mr- Chi nthan V Gowda",
+                "confidence": 0.96
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: 'Chinthm V Gowda' in WhatsApp Image 2026-09-22 at 10.27.11.jpeg vs 'CHINTIIANV GOWDA VASANTHAKUMARA S' in WhatsApp Image 2026-09-22 at 10.26.29.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth",
+          "value": "15-05-2007",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "15-05-2007 FIFTEENTH",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "mobile_number": {
+          "field_id": "mobile_number",
+          "label": "Mobile Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "email_address": {
+          "field_id": "email_address",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Current Institution Name",
+          "value": "ST JOSEPH'S ENG MED HIGH SCHOOL KRISHNARAJANAGAR AT & PO & TQ MYSURU DIST 571602 08-05-2023",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME AND ADDRESS : ST JOSEPH'S ENG MED HIGH SCHOOL KRISHNARAJANAGAR AT & PO & TQ MYSURU DIST ",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "current_course": {
+          "field_id": "current_course",
+          "label": "Current Course / Degree",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "current_year": {
+          "field_id": "current_year",
+          "label": "Current Year of Study",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "previous_percentage": {
+          "field_id": "previous_percentage",
+          "label": "Previous Academic Percentage / CGPA",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income",
+          "value": "40000",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "source_page": 1,
+          "evidence_text": "400001-",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Bank Account Number",
+          "value": "44255513516",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": ">ccount No- - 44255513516",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": "SBIN0040069",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "IFSC: SBIN0040069",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "upload_photo": {
+          "field_id": "upload_photo",
+          "label": "Passport Size Photograph",
+          "value": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "upload_transcript": {
+          "field_id": "upload_transcript",
+          "label": "Latest Marksheet / Transcript",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "upload_income_cert": {
+          "field_id": "upload_income_cert",
+          "label": "Income Certificate",
+          "value": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "upload_bank_proof": {
+          "field_id": "upload_bank_proof",
+          "label": "Bank Passbook / Cancelled Cheque",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "enrolment_number": {
+          "field_id": "enrolment_number",
+          "label": "Enrolment Number",
+          "value": "0639/10413/00766",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "Enrolment No.: 0639/10413/00766",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "father_name": {
+          "field_id": "father_name",
+          "label": "Father's Name",
+          "value": "SIDDARAMESWARA NILAYA",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "Slo SIDDARAMESWARA NILAYA",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "village_town_city": {
+          "field_id": "village_town_city",
+          "label": "Village/Town/City",
+          "value": "Krishlwajanagara",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "VTC: Krishlwajanagara",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "district": {
+          "field_id": "district",
+          "label": "District",
+          "value": "Mysuru",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "District: Mysuru",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "state": {
+          "field_id": "state",
+          "label": "State",
+          "value": "Karnataka",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "Stae: Karnat*a",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "pincode": {
+          "field_id": "pincode",
+          "label": "PIN Code",
+          "value": "571602",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "571602",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "aadhaar_number": {
+          "field_id": "aadhaar_number",
+          "label": "Aadhaar Number",
+          "value": "2339 1657 7301",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "2339 1657 7301",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "address": {
+          "field_id": "address",
+          "label": "Address",
+          "value": "s/o vasanthakurnara-s, SIDDARAMESWARA NILAYA Kanakanagara 2nd Stage, Krishnarajanagara",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "s/o vasanthakurnara-s\u201e SIDDARAMESWARA NILAYA Kanakanagara 2nd Stage, rilulluru Krishnaraj anagara (TMC)",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email",
+          "value": "help@uidai.gov.in",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "help@uidai.gov.in",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "website": {
+          "field_id": "website",
+          "label": "Website",
+          "value": "www.uidai.gov.in",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+          "source_page": 1,
+          "evidence_text": "www.uidai.gov.in",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "document_title": {
+          "field_id": "document_title",
+          "label": "Document Title",
+          "value": "GOVERNMENT OF KARNATAKA Karnataka School Examination and Assessment Board, Bengaluru / Statement Certificate",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "GOVERNMENT OF KARNATAKA \u00b1ode), Karnataka School Examination and Assessment Board, Bengaluru / Statement Certificate",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "certificate_number": {
+          "field_id": "certificate_number",
+          "label": "Certificate Number",
+          "value": "010252746",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Certificate 010252746",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "exam_number": {
+          "field_id": "exam_number",
+          "label": "Examination Number",
+          "value": "20230205884",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "No. : 20230205884",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "medium_of_instruction": {
+          "field_id": "medium_of_instruction",
+          "label": "Medium of Instruction",
+          "value": "ENGLISH",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Medium of Instruction: ENGLISH",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "exam_session_year": {
+          "field_id": "exam_session_year",
+          "label": "Exam Session and Year",
+          "value": "MARCH/APRIL - 2023",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "MARCH/APRIL - 2023",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "candidate_type": {
+          "field_id": "candidate_type",
+          "label": "Candidate Type",
+          "value": "CCE REGULAR FRESH",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Candidate Type : CCE REGULAR FRESH",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "mother_name": {
+          "field_id": "mother_name",
+          "label": "Mother's Name",
+          "value": "ANURADHA C",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mother's Name : ANURADHA C",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "date_of_birth_words": {
+          "field_id": "date_of_birth_words",
+          "label": "Date of Birth in Words",
+          "value": "FIFTEENTH - MAY - TWO THOUSAND SEVEN",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "FIFTEENTH - MAY - TWO THOUSAND SEVEN",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "total_marks_obtained": {
+          "field_id": "total_marks_obtained",
+          "label": "Total Marks Obtained",
+          "value": "598",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "TOTAL MARKS 598",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "total_marks_in_words": {
+          "field_id": "total_marks_in_words",
+          "label": "Total Marks Obtained in Words",
+          "value": "FIVE HUNDRED NINETY-EIGHT ONLY",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "CGA: FIVE HUNDRED NINETY-EIGHT ONLY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "Percentage",
+          "value": "95.68%",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "(95.68%)",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "school_code": {
+          "field_id": "school_code",
+          "label": "School Code",
+          "value": "EE0465",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL CODE: EE0465",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "school_name": {
+          "field_id": "school_name",
+          "label": "School Name and Address",
+          "value": "ST JOSEPH'S ENG MED HIGH SCHOOL KRISHNARAJANAGAR AT & PO & TQ MYSURU DIST 571602",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "ST JOSEPH'S ENG MED HIGH SCHOOL KRISHNARAJANAGAR AT & PO & TQ MYSURU DIST 571602",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "issue_date": {
+          "field_id": "issue_date",
+          "label": "Issue Date",
+          "value": "08-05-2023",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "08-05-2023",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Roll Number",
+          "value": "23181929",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+          "source_page": 1,
+          "evidence_text": "ZIEE11131 23181929 GOVERNMENT OF KARNATAKA",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "rd_number": {
+          "field_id": "rd_number",
+          "label": "RD Number",
+          "value": "RD0038720101730",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+          "source_page": 1,
+          "evidence_text": "RD0038720101730",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "image_file": {
+          "field_id": "image_file",
+          "label": "Image File",
+          "value": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg. Dimensions: 402x520, format: JPEG",
+          "status": "LIKELY",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "source_page": 1,
+          "evidence_text": "Image file: WhatsApp Image 2026-09-22 at 10.29.12.jpeg. Dimensions: 402x520, format: JPEG",
+          "confidence": 0.9,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "STATE BANK OF INDIA",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "STATE BANK OF INDIA",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "branch_name": {
+          "field_id": "branch_name",
+          "label": "Branch Name",
+          "value": "MH ROAD KRISHNARAJA NAGAR",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "MH ROAD KRISHNARAJA NAGAR",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "micr_code": {
+          "field_id": "micr_code",
+          "label": "MICR Code",
+          "value": "571002003",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "571002003",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Phone Number",
+          "value": "92172369158",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "92172369158",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "account_type": {
+          "field_id": "account_type",
+          "label": "Account Type",
+          "value": "SB TINY SPL OD GEN PUB IND",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "SB TINY SPL OD GEN PUB IND",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "mode_of_operation": {
+          "field_id": "mode_of_operation",
+          "label": "Mode of Operation",
+          "value": "SINGLE",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "SINGLE",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "account_opening_date": {
+          "field_id": "account_opening_date",
+          "label": "Account Opening Date",
+          "value": "07/07/",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "07/071",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "nominee_registration_number": {
+          "field_id": "nominee_registration_number",
+          "label": "Nominee Registration Number",
+          "value": "00000005z",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "00000005\"z",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "date_of_issue": {
+          "field_id": "date_of_issue",
+          "label": "Date of Issue",
+          "value": "15/07/",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "15/07/",
+          "confidence": 0.95,
+          "conflict_details": null
+        },
+        "issuing_authority": {
+          "field_id": "issuing_authority",
+          "label": "Issuing Authority",
+          "value": "FIRST BRANCH MANAGER",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+          "source_page": 1,
+          "evidence_text": "FIRST BRANCHHANAGER",
+          "confidence": 0.95,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "full_name",
+          "field_label": "Full Name",
+          "candidates": [
+            {
+              "value": "Chinthm V Gowda",
+              "source_file": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+              "source_page": 1,
+              "evidence_text": "Chinthm V Gowda Slo",
+              "confidence": 0.98
+            },
+            {
+              "value": "CHINTIIANV GOWDA VASANTHAKUMARA S",
+              "source_file": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+              "source_page": 1,
+              "evidence_text": "Name: CHINTIIANV GOWDA VASANTHAKUMARA S Father's Name : Mother's Name",
+              "confidence": 0.98
+            },
+            {
+              "value": "Mr. Chinthan V Gowda",
+              "source_file": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+              "source_page": 1,
+              "evidence_text": "qame: Mr- Chi nthan V Gowda",
+              "confidence": 0.96
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: 'Chinthm V Gowda' in WhatsApp Image 2026-09-22 at 10.27.11.jpeg vs 'CHINTIIANV GOWDA VASANTHAKUMARA S' in WhatsApp Image 2026-09-22 at 10.26.29.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        }
+      ],
+      "unresolved_conflicts_count": 1
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "c59067a20248b6488c8b4678994ac2c423d3c9def17204c2feaee9116045569a",
+    "entry_hash": "dca22cffa85fd4a16246a459ff5fa4472f272057608651dfb867e1fb8019a544"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790060705.208604,
+    "formatted_time": "12:35:05",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.27.11.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.27.11.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.27.11.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 238.55,
+      "final_size_kb": 301.5,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "dca22cffa85fd4a16246a459ff5fa4472f272057608651dfb867e1fb8019a544",
+    "entry_hash": "39807b8c86fac61b5fe43bce139e5189ea75cd504bf407d08e46bd015571cc5f"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790060705.2849724,
+    "formatted_time": "12:35:05",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.26.29.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.26.29.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.26.29.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 261.76,
+      "final_size_kb": 326.03,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "39807b8c86fac61b5fe43bce139e5189ea75cd504bf407d08e46bd015571cc5f",
+    "entry_hash": "cc6e1588308ed7f3f5eaf7ac618fba6c2858542d50dda122bc04eab623f349dd"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790060705.3546724,
+    "formatted_time": "12:35:05",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.29.50.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.50.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.50.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 157.15,
+      "final_size_kb": 200.34,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "cc6e1588308ed7f3f5eaf7ac618fba6c2858542d50dda122bc04eab623f349dd",
+    "entry_hash": "a9b2a9c7b419033542c15cd4c37e30ef4904cbe303ba98fada8421230bff94e2"
+  },
+  {
+    "step_id": "ADAPT_IMAGE_WHATSAPP IMAGE 2026-09-22 AT 10.29.12.JPEG",
+    "action": "Self-Healing Document Adaptation: Image Format & Resize",
+    "actor": "document_engine",
+    "timestamp": 1790060705.3812778,
+    "formatted_time": "12:35:05",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.29.12.jpg"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12.jpg",
+      "verified": true,
+      "output_format": "JPEG",
+      "dimensions": {
+        "width": 200,
+        "height": 230
+      },
+      "file_size_kb": 11.53,
+      "quality_applied": 90
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "a9b2a9c7b419033542c15cd4c37e30ef4904cbe303ba98fada8421230bff94e2",
+    "entry_hash": "425fade65a167a8e59caa3209c99d84505efa520f04d80111321bddabf263f1a"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790060705.4810326,
+    "formatted_time": "12:35:05",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+      "converted": "WhatsApp Image 2026-09-22 at 10.26.30.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.26.30.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.26.30.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 252.48,
+      "final_size_kb": 319.47,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "425fade65a167a8e59caa3209c99d84505efa520f04d80111321bddabf263f1a",
+    "entry_hash": "b9d3e8e012e16853378318f4bebf8310d89db02c5a49557b1dad52885eb914c0"
+  },
+  {
+    "step_id": "RESOLVE_FULL_NAME",
+    "action": "User Conflict Resolution: full_name",
+    "actor": "user",
+    "timestamp": 1790060883.205028,
+    "formatted_time": "12:38:03",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "field_id": "full_name",
+      "resolved_value": "Mr. Chinthan V Gowda",
+      "source": "WhatsApp Image 2026-09-22 at 10.26.30.jpeg"
+    },
+    "status": "USER_RESOLVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "b9d3e8e012e16853378318f4bebf8310d89db02c5a49557b1dad52885eb914c0",
+    "entry_hash": "bd3f3fd94a36b08c2b0b96b2515f8ee05b146ecee9dc5b7e75782af73742cd35"
+  },
+  {
+    "step_id": "PLAN_APPROVAL",
+    "action": "Plan Approval",
+    "actor": "user",
+    "timestamp": 1790060889.4663188,
+    "formatted_time": "12:38:09",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "modifications": []
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "APPROVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "bd3f3fd94a36b08c2b0b96b2515f8ee05b146ecee9dc5b7e75782af73742cd35",
+    "entry_hash": "e6dbc5be784ba07352c2916745a9ba49af68715c11fea930d459d524b64d0578"
+  },
+  {
+    "step_id": "ACT_001_PERSONAL",
+    "action": "Fill Personal Information",
+    "actor": "verifier",
+    "timestamp": 1790060891.1237535,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "portal_session_active",
+      "all_personal_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Personal Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Personal Details",
+      "session_id": "sess_8c7adf5bf8c9",
+      "data_submitted": {
+        "full_name": "Mr. Chinthan V Gowda",
+        "date_of_birth": "15-05-2007",
+        "gender": "Male",
+        "category": "General",
+        "email": "help@uidai.gov.in",
+        "phone_number": "92172369158"
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_8c7adf5bf8c9",
+        "step_saved": "Personal Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number"
+        ],
+        "last_updated": 1790060891.1236777
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1236808
+    },
+    "postconditions": [
+      "status_200_ok",
+      "fields_persisted_in_portal"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number"
+      ],
+      "server_timestamp": 1790060891.1236777,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "e6dbc5be784ba07352c2916745a9ba49af68715c11fea930d459d524b64d0578",
+    "entry_hash": "08f1227699b0147cb10a7e50ad8a502b6c473a6e1556a95c6f1eb4448cccdbc3"
+  },
+  {
+    "step_id": "ACT_002_ACADEMIC",
+    "action": "Fill Academic Records",
+    "actor": "verifier",
+    "timestamp": 1790060891.1301293,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "portal_session_active",
+      "academic_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Academic Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Academic Details",
+      "session_id": "sess_8c7adf5bf8c9",
+      "data_submitted": {
+        "institution_name": "ST JOSEPH'S ENG MED HIGH SCHOOL KRISHNARAJANAGAR AT & PO & TQ MYSURU DIST 571602 08-05-2023",
+        "roll_number": "23181929",
+        "tenth_percentage": "95.68%",
+        "twelfth_percentage": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_8c7adf5bf8c9",
+        "step_saved": "Academic Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage"
+        ],
+        "last_updated": 1790060891.13
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.130003
+    },
+    "postconditions": [
+      "status_200_ok",
+      "academic_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage"
+      ],
+      "server_timestamp": 1790060891.13,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "08f1227699b0147cb10a7e50ad8a502b6c473a6e1556a95c6f1eb4448cccdbc3",
+    "entry_hash": "7700cf6e16caa140fab2c01042f9088a13dc423ee7631305cc5839da6b200764"
+  },
+  {
+    "step_id": "ACT_003_FINANCIAL",
+    "action": "Fill Financial & Bank Information",
+    "actor": "verifier",
+    "timestamp": 1790060891.1359317,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "portal_session_active",
+      "income_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Financial Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Financial Details",
+      "session_id": "sess_8c7adf5bf8c9",
+      "data_submitted": {
+        "annual_family_income": "40000",
+        "bank_name": "STATE BANK OF INDIA",
+        "bank_account_number": "44255513516",
+        "ifsc_code": "SBIN0040069"
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_8c7adf5bf8c9",
+        "step_saved": "Financial Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage",
+          "annual_family_income",
+          "bank_name",
+          "bank_account_number",
+          "ifsc_code"
+        ],
+        "last_updated": 1790060891.1358972
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1358984
+    },
+    "postconditions": [
+      "status_200_ok",
+      "financial_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage",
+        "annual_family_income",
+        "bank_name",
+        "bank_account_number",
+        "ifsc_code"
+      ],
+      "server_timestamp": 1790060891.1358972,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "7700cf6e16caa140fab2c01042f9088a13dc423ee7631305cc5839da6b200764",
+    "entry_hash": "505387ae1befd3b6fa7d631207cd5318a393bcf01511468e199b5fac5232dda2"
+  },
+  {
+    "step_id": "ACT_004_UPLOAD_AADHAAR",
+    "action": "Upload Identity Document (Aadhaar)",
+    "actor": "verifier",
+    "timestamp": 1790060891.1408734,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_aadhaar')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_aadhaar",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.27.11.pdf",
+      "file_size_kb": 301.5,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_aadhaar' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_aadhaar",
+          "filename": "WhatsApp Image 2026-09-22 at 10.27.11.pdf",
+          "size_kb": 301.50390625,
+          "mime_type": "application/pdf",
+          "dimensions": null,
+          "uploaded_at": 1790060891.1406634,
+          "checksum": "179dfaa79f4a06bd75bd2d6d17fec5f9"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1406887
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "checksum_verified"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "179dfaa79f4a06bd75bd2d6d17fec5f9",
+      "on_disk_size_kb": 301.5,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "505387ae1befd3b6fa7d631207cd5318a393bcf01511468e199b5fac5232dda2",
+    "entry_hash": "a2a0371e880e918fa8677b781814786755d9d1d8ae8b11a46dd336714e2f2515"
+  },
+  {
+    "step_id": "ACT_005_UPLOAD_MARKSHEET",
+    "action": "Upload Academic Marksheet",
+    "actor": "verifier",
+    "timestamp": 1790060891.1457212,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_marksheet')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_marksheet",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.26.29.pdf",
+      "file_size_kb": 326.03,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_marksheet' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_marksheet",
+          "filename": "WhatsApp Image 2026-09-22 at 10.26.29.pdf",
+          "size_kb": 326.0283203125,
+          "mime_type": "application/pdf",
+          "dimensions": null,
+          "uploaded_at": 1790060891.1452622,
+          "checksum": "131aa03ade066ddd12c08034ebcea688"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1453173
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "checksum_verified"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "131aa03ade066ddd12c08034ebcea688",
+      "on_disk_size_kb": 326.03,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "a2a0371e880e918fa8677b781814786755d9d1d8ae8b11a46dd336714e2f2515",
+    "entry_hash": "1ba34f04cc3a625e34c18d6890bd9fb56a49267c0716c284b5d912cb263ef98c"
+  },
+  {
+    "step_id": "ACT_006_UPLOAD_INCOME_CERT",
+    "action": "Upload Income Certificate",
+    "actor": "verifier",
+    "timestamp": 1790060891.1510053,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_income_cert')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_income_cert",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.29.50.pdf",
+      "file_size_kb": 200.34,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_income_cert' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_income_cert",
+          "filename": "WhatsApp Image 2026-09-22 at 10.29.50.pdf",
+          "size_kb": 200.33984375,
+          "mime_type": "application/pdf",
+          "dimensions": null,
+          "uploaded_at": 1790060891.1506798,
+          "checksum": "5b939baaebe8503d40a235df240be66c"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1507137
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "size_under_2048kb"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "5b939baaebe8503d40a235df240be66c",
+      "on_disk_size_kb": 200.34,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "1ba34f04cc3a625e34c18d6890bd9fb56a49267c0716c284b5d912cb263ef98c",
+    "entry_hash": "66615faef71e9b64171e85824b8658b0740fccba1d809c9431674a65a3a29897"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO_ATTEMPT_1",
+    "action": "Upload Applicant Photograph",
+    "actor": "failure_analyzer",
+    "timestamp": 1790060891.1575873,
+    "formatted_time": "12:38:11",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_photo",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+      "file_size_kb": 126.34,
+      "mime_type": "image/jpeg",
+      "dimensions": [
+        402,
+        520
+      ],
+      "response": {
+        "success": false,
+        "status_code": 400,
+        "error": "FORMAT_DIMENSION_ERROR",
+        "message": "Upload rejected: Dimensions (402, 520) do not match strict requirement 200x230 pixels; File size 126.3 KB exceeds 100 KB limit",
+        "required": {
+          "format": "JPEG",
+          "dimensions": [
+            200,
+            230
+          ],
+          "max_kb": 100
+        },
+        "observed": {
+          "format": "image/jpeg",
+          "dimensions": [
+            402,
+            520
+          ],
+          "size_kb": 126.337890625
+        }
+      },
+      "status_code": 400,
+      "success": false,
+      "error": "FORMAT_DIMENSION_ERROR",
+      "observed_at": 1790060891.1567948
+    },
+    "postconditions": [],
+    "evidence": {
+      "diagnosis": {
+        "failure_category": "FORMAT_ERROR",
+        "root_cause": "Image format or pixel dimensions violate portal specification",
+        "can_recover": true,
+        "proposed_strategy": "IMAGE_ADAPTATION",
+        "diagnostic_evidence": {
+          "status_code": 400,
+          "error_text": "Portal upload rejected with HTTP 400: Upload rejected: Dimensions (402, 520) do not match strict requirement 200x230 pixels; File size 126.3 KB exceeds 100 KB limit Portal upload failed: FORMAT_DIMENSION_ERROR On-disk file verification failed: {'valid': False, 'file_size_kb': 126.34, 'size_valid': False, 'extension': '.jpeg', 'extension_valid': True, 'dimensions': (402, 520), 'dimensions_valid': False} Upload rejected: Dimensions (402, 520) do not match strict requirement 200x230 pixels; File size 126.3 KB exceeds 100 KB limit FORMAT_DIMENSION_ERROR",
+          "observation": {
+            "operation": "upload_document",
+            "doc_type": "doc_photo",
+            "file_name": "WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+            "file_size_kb": 126.34,
+            "mime_type": "image/jpeg",
+            "dimensions": [
+              402,
+              520
+            ],
+            "response": {
+              "success": false,
+              "status_code": 400,
+              "error": "FORMAT_DIMENSION_ERROR",
+              "message": "Upload rejected: Dimensions (402, 520) do not match strict requirement 200x230 pixels; File size 126.3 KB exceeds 100 KB limit",
+              "required": {
+                "format": "JPEG",
+                "dimensions": [
+                  200,
+                  230
+                ],
+                "max_kb": 100
+              },
+              "observed": {
+                "format": "image/jpeg",
+                "dimensions": [
+                  402,
+                  520
+                ],
+                "size_kb": 126.337890625
+              }
+            },
+            "status_code": 400,
+            "success": false,
+            "error": "FORMAT_DIMENSION_ERROR",
+            "observed_at": 1790060891.1567948
+          }
+        },
+        "attempt_number": 1
+      },
+      "verifier_errors": [
+        "Portal upload rejected with HTTP 400: Upload rejected: Dimensions (402, 520) do not match strict requirement 200x230 pixels; File size 126.3 KB exceeds 100 KB limit",
+        "Portal upload failed: FORMAT_DIMENSION_ERROR",
+        "On-disk file verification failed: {'valid': False, 'file_size_kb': 126.34, 'size_valid': False, 'extension': '.jpeg', 'extension_valid': True, 'dimensions': (402, 520), 'dimensions_valid': False}"
+      ]
+    },
+    "status": "FAILED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "FAILED",
+    "previous_hash": "66615faef71e9b64171e85824b8658b0740fccba1d809c9431674a65a3a29897",
+    "entry_hash": "2ec5ca497f2825f5473b7de01c8f52b6622b09152b106c6a413310813067c80c"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO_REC_1",
+    "action": "Recovery: IMAGE_ADAPTATION",
+    "actor": "recovery_agent",
+    "timestamp": 1790060891.1780264,
+    "formatted_time": "12:38:11",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "success": true,
+      "strategy_applied": "IMAGE_ADAPTATION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+        "adaptation_stats": {
+          "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+          "verified": true,
+          "output_format": "JPEG",
+          "dimensions": {
+            "width": 200,
+            "height": 230
+          },
+          "file_size_kb": 11.53,
+          "quality_applied": 90
+        }
+      },
+      "message": "Image adapted: Converted to JPEG, resized to 200x230, compressed to 11.53 KB."
+    },
+    "status": "RECOVERED",
+    "attempt": 1,
+    "recovery_details": {
+      "success": true,
+      "strategy_applied": "IMAGE_ADAPTATION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+        "adaptation_stats": {
+          "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12.jpeg",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_28AF3F6F\\WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+          "verified": true,
+          "output_format": "JPEG",
+          "dimensions": {
+            "width": 200,
+            "height": 230
+          },
+          "file_size_kb": 11.53,
+          "quality_applied": 90
+        }
+      },
+      "message": "Image adapted: Converted to JPEG, resized to 200x230, compressed to 11.53 KB."
+    },
+    "state_transition": null,
+    "verification_result": "",
+    "previous_hash": "2ec5ca497f2825f5473b7de01c8f52b6622b09152b106c6a413310813067c80c",
+    "entry_hash": "f34c47454a7219ec24986aff32dc4f7642ef71e4e7601aded7c9e3a51ab8bee3"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO",
+    "action": "Upload Applicant Photograph",
+    "actor": "verifier",
+    "timestamp": 1790060891.1856017,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "file_readable_on_disk"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_photo')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_photo",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+      "file_size_kb": 11.53,
+      "mime_type": "image/jpeg",
+      "dimensions": [
+        200,
+        230
+      ],
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_photo' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_photo",
+          "filename": "WhatsApp Image 2026-09-22 at 10.29.12_adapted.jpg",
+          "size_kb": 11.5283203125,
+          "mime_type": "image/jpeg",
+          "dimensions": [
+            200,
+            230
+          ],
+          "uploaded_at": 1790060891.1848288,
+          "checksum": "9abf1dc3501d8229d28703aea7bd0e95"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.184865
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "format_jpg",
+      "dimensions_200x230"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "9abf1dc3501d8229d28703aea7bd0e95",
+      "on_disk_size_kb": 11.53,
+      "on_disk_dimensions": [
+        200,
+        230
+      ],
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 2,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "f34c47454a7219ec24986aff32dc4f7642ef71e4e7601aded7c9e3a51ab8bee3",
+    "entry_hash": "0ec9463281df276d61e701d2e4776e8c6b9d60b1400860e38dacf20452b4c9d6"
+  },
+  {
+    "step_id": "ACT_UPLOAD_DOC_PASSBOOK",
+    "action": "Upload Document (Passbook)",
+    "actor": "verifier",
+    "timestamp": 1790060891.1917834,
+    "formatted_time": "12:38:11",
+    "preconditions": [
+      "file_readable_on_disk"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_passbook')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_passbook",
+      "file_name": "WhatsApp Image 2026-09-22 at 10.26.30.pdf",
+      "file_size_kb": 319.47,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_passbook' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_passbook",
+          "filename": "WhatsApp Image 2026-09-22 at 10.26.30.pdf",
+          "size_kb": 319.466796875,
+          "mime_type": "application/pdf",
+          "dimensions": null,
+          "uploaded_at": 1790060891.19145,
+          "checksum": "668da734de8cd23ea0fc7523500122ba"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790060891.1914816
+    },
+    "postconditions": [
+      "portal_accepted_upload"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "668da734de8cd23ea0fc7523500122ba",
+      "on_disk_size_kb": 319.47,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0ec9463281df276d61e701d2e4776e8c6b9d60b1400860e38dacf20452b4c9d6",
+    "entry_hash": "9310776236aa396493611085ba48c2e2abff1baa710a62acce94adc2c0f0a94c"
+  },
+  {
+    "step_id": "SUBMISSION_USER_APPROVAL",
+    "action": "Irreversible Action Authorization",
+    "actor": "user",
+    "timestamp": 1790060960.1256661,
+    "formatted_time": "12:39:20",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "user_confirmed": true
+    },
+    "status": "AUTHORIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "9310776236aa396493611085ba48c2e2abff1baa710a62acce94adc2c0f0a94c",
+    "entry_hash": "598f0b92dc2e5e0f7e78b8e18a6fc15ec565aa86359fa68eb2a60b4b67510f02"
+  },
+  {
+    "step_id": "ACT_008_FINAL_SUBMISSION",
+    "action": "Submit Final Application & Obtain Verifiable Receipt",
+    "actor": "verifier",
+    "timestamp": 1790060961.6791754,
+    "formatted_time": "12:39:21",
+    "preconditions": [
+      "user_approval_granted",
+      "all_fields_verified",
+      "all_documents_uploaded"
+    ],
+    "command_or_operation": "portal_adapter.submit_application()",
+    "observation": {
+      "operation": "submit_application",
+      "session_id": "sess_8c7adf5bf8c9",
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Application submitted and verified successfully.",
+        "reference_number": "SCH-2026-83942",
+        "receipt": {
+          "application_id": "sess_8c7adf5bf8c9",
+          "reference_number": "SCH-2026-83942",
+          "portal_status": "Submitted",
+          "submitted_at": 1790060961.6790695,
+          "candidate_name": "Mr. Chinthan V Gowda",
+          "category": "General",
+          "income": "40000",
+          "verified_documents_count": 5,
+          "receipt_hash": "14eba76d49dd64db61d698ae0d284789f4a48687f70725ab36fbcf0b18a4dff3"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "reference_number": "SCH-2026-83942",
+      "receipt": {
+        "application_id": "sess_8c7adf5bf8c9",
+        "reference_number": "SCH-2026-83942",
+        "portal_status": "Submitted",
+        "submitted_at": 1790060961.6790695,
+        "candidate_name": "Mr. Chinthan V Gowda",
+        "category": "General",
+        "income": "40000",
+        "verified_documents_count": 5,
+        "receipt_hash": "14eba76d49dd64db61d698ae0d284789f4a48687f70725ab36fbcf0b18a4dff3"
+      },
+      "observed_at": 1790060961.6791122
+    },
+    "postconditions": [
+      "status_200_ok",
+      "valid_reference_number",
+      "portal_status_submitted",
+      "receipt_hash_verified"
+    ],
+    "evidence": {
+      "reference_number": "SCH-2026-83942",
+      "portal_status": "Submitted",
+      "submitted_at": 1790060961.6790695,
+      "receipt_hash": "14eba76d49dd64db61d698ae0d284789f4a48687f70725ab36fbcf0b18a4dff3",
+      "hash_verified": true,
+      "candidate_name": "Mr. Chinthan V Gowda",
+      "verified_by": "VerifierAgent.verify_final_submission"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "598f0b92dc2e5e0f7e78b8e18a6fc15ec565aa86359fa68eb2a60b4b67510f02",
+    "entry_hash": "bfa5cb1f9ee7af3640e3cec9f217cd247f57f54d24dbe4d4dd64ca534e8a3e6c"
+  },
+  {
+    "step_id": "FINAL_VERIFIED_SUCCESS",
+    "action": "Evidence Gate Final Certification",
+    "actor": "evidence_gate",
+    "timestamp": 1790060961.6871428,
+    "formatted_time": "12:39:21",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "operation": "submit_application",
+      "session_id": "sess_8c7adf5bf8c9",
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Application submitted and verified successfully.",
+        "reference_number": "SCH-2026-83942",
+        "receipt": {
+          "application_id": "sess_8c7adf5bf8c9",
+          "reference_number": "SCH-2026-83942",
+          "portal_status": "Submitted",
+          "submitted_at": 1790060961.6790695,
+          "candidate_name": "Mr. Chinthan V Gowda",
+          "category": "General",
+          "income": "40000",
+          "verified_documents_count": 5,
+          "receipt_hash": "14eba76d49dd64db61d698ae0d284789f4a48687f70725ab36fbcf0b18a4dff3"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "reference_number": "SCH-2026-83942",
+      "receipt": {
+        "application_id": "sess_8c7adf5bf8c9",
+        "reference_number": "SCH-2026-83942",
+        "portal_status": "Submitted",
+        "submitted_at": 1790060961.6790695,
+        "candidate_name": "Mr. Chinthan V Gowda",
+        "category": "General",
+        "income": "40000",
+        "verified_documents_count": 5,
+        "receipt_hash": "14eba76d49dd64db61d698ae0d284789f4a48687f70725ab36fbcf0b18a4dff3"
+      },
+      "observed_at": 1790060961.6791122
+    },
+    "postconditions": [],
+    "evidence": {
+      "reference_number": "SCH-2026-83942",
+      "portal_status": "submitted",
+      "submitted_at": 1790060961.6790695
+    },
+    "status": "VERIFIED_SUCCESS",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "GATE_PASSED",
+    "previous_hash": "bfa5cb1f9ee7af3640e3cec9f217cd247f57f54d24dbe4d4dd64ca534e8a3e6c",
+    "entry_hash": "f62ac62ebd1a4d45ff409e4f441a524b0708dbf00b35f7fc10e96a02e1c80cb5"
+  }
+]

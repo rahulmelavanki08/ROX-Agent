@@ -1,0 +1,250 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790015568.1143405,
+    "formatted_time": "00:02:48",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_a74917743ef0",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "14e2df8987dccaed786b01c443eb47bb32705d51250461065a40d80c7f6ebf3f"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790015569.277503,
+    "formatted_time": "00:02:49",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": "M Vinayaka",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "M Vinayaka cto",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": "24/08/2007",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "DOB: 24/08/2007",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": "OBC (Category II-B)",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Category 1 1 (B)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": "V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAYANAGARA.S83131",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME AND ADDRESS: V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": "83.04",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "(83.04%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": "50000",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "annual income is Rs. 50000",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "Canara Bank",
+          "status": "VERIFIED",
+          "source_file": "bankpassbook.jpeg",
+          "source_page": 1,
+          "evidence_text": "Canara Bank",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "adharcard.jpeg",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: adharcard.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 11.35.46 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": "photo.jpeg",
+          "status": "VERIFIED",
+          "source_file": "photo.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: photo.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [],
+      "unresolved_conflicts_count": 0
+    },
+    "status": "AWAITING_APPROVAL",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "14e2df8987dccaed786b01c443eb47bb32705d51250461065a40d80c7f6ebf3f",
+    "entry_hash": "349c8e213f181db4ba72add805e426cbfb22f5b2cca4ddf8cb0b6f76b932c0c4"
+  }
+]

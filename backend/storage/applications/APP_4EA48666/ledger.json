@@ -1,0 +1,1329 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790054174.7245145,
+    "formatted_time": "10:46:14",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_0656387dc88b",
+      "url": "http://localhost:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "838653b519568408a352a38f3bd37e8c1e8fecf830366bf5f86679860031caf8"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790054175.1688254,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 2
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "full_name",
+            "field_label": "Full Name",
+            "candidates": [
+              {
+                "value": "M Vinayaka",
+                "source_file": "adharcard.jpeg",
+                "source_page": 1,
+                "evidence_text": "M Vinayaka cto",
+                "confidence": 0.98
+              },
+              {
+                "value": "M Veeresh",
+                "source_file": "marksheet.jpeg",
+                "source_page": 1,
+                "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+                "confidence": 0.96
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in marksheet.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth (DD/MM/YYYY)",
+          "value": null,
+          "status": "CONFLICT",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.5,
+          "conflict_details": {
+            "field_id": "date_of_birth",
+            "field_label": "Date of Birth",
+            "candidates": [
+              {
+                "value": "24/08/2007",
+                "source_file": "adharcard.jpeg",
+                "source_page": 1,
+                "evidence_text": "DOB: 24/08/2007",
+                "confidence": 0.99
+              },
+              {
+                "value": "18/08/2009",
+                "source_file": "marksheet.jpeg",
+                "source_page": 1,
+                "evidence_text": "EIGHTEENTH.AUGUST. TWO THOUSAND NINE",
+                "confidence": 0.98
+              }
+            ],
+            "status": "UNRESOLVED",
+            "resolved_value": null,
+            "resolution_source": null,
+            "resolution_note": null,
+            "blocking_reason": "Identity Mismatch detected: '24/08/2007' in adharcard.jpeg vs '18/08/2009' in marksheet.jpeg. These documents contain conflicting records for critical field 'Date of Birth'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+          }
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "MALE",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Number",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": "V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAYANAGARA.S83131",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME AND ADDRESS: V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Registration / Roll Number",
+          "value": "25614662",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "25614662",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Percentage (%)",
+          "value": "83.04",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "(83.04%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th / Diploma Percentage (%)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "adharcard.jpeg",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: adharcard.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "marksheet.jpeg",
+          "status": "VERIFIED",
+          "source_file": "marksheet.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: marksheet.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [
+        {
+          "field_id": "date_of_birth",
+          "field_label": "Date of Birth",
+          "candidates": [
+            {
+              "value": "24/08/2007",
+              "source_file": "adharcard.jpeg",
+              "source_page": 1,
+              "evidence_text": "DOB: 24/08/2007",
+              "confidence": 0.99
+            },
+            {
+              "value": "18/08/2009",
+              "source_file": "marksheet.jpeg",
+              "source_page": 1,
+              "evidence_text": "EIGHTEENTH.AUGUST. TWO THOUSAND NINE",
+              "confidence": 0.98
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: '24/08/2007' in adharcard.jpeg vs '18/08/2009' in marksheet.jpeg. These documents contain conflicting records for critical field 'Date of Birth'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        },
+        {
+          "field_id": "full_name",
+          "field_label": "Full Name",
+          "candidates": [
+            {
+              "value": "M Vinayaka",
+              "source_file": "adharcard.jpeg",
+              "source_page": 1,
+              "evidence_text": "M Vinayaka cto",
+              "confidence": 0.98
+            },
+            {
+              "value": "M Veeresh",
+              "source_file": "marksheet.jpeg",
+              "source_page": 1,
+              "evidence_text": "Board. ber.iuru UNOLISH \u2022 M VEERESH M PRAKASH Nam",
+              "confidence": 0.96
+            }
+          ],
+          "status": "UNRESOLVED",
+          "resolved_value": null,
+          "resolution_source": null,
+          "resolution_note": null,
+          "blocking_reason": "Identity Mismatch detected: 'M Vinayaka' in adharcard.jpeg vs 'M Veeresh' in marksheet.jpeg. These documents contain conflicting records for critical field 'Full Name'. Under Zero-Trust policy, ROX blocks automatic progression until you select the correct identity."
+        }
+      ],
+      "unresolved_conflicts_count": 2
+    },
+    "status": "BLOCKED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "CONFLICT_DETECTED",
+    "previous_hash": "838653b519568408a352a38f3bd37e8c1e8fecf830366bf5f86679860031caf8",
+    "entry_hash": "6c2a78f82f6878e9e9922065c737a4a0b4e0ac96f65b88a59d6aedfe0c5e3dde"
+  },
+  {
+    "step_id": "RESOLVE_FULL_NAME",
+    "action": "User Conflict Resolution: full_name",
+    "actor": "user",
+    "timestamp": 1790054175.178442,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "field_id": "full_name",
+      "resolved_value": "M Vinayaka",
+      "source": "Aadhaar"
+    },
+    "status": "USER_RESOLVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "6c2a78f82f6878e9e9922065c737a4a0b4e0ac96f65b88a59d6aedfe0c5e3dde",
+    "entry_hash": "14dc4ac8c35c664b3d106eb2b0410d59f1ac7cd4c5d10ab047867ed6fe768a9f"
+  },
+  {
+    "step_id": "RESOLVE_DATE_OF_BIRTH",
+    "action": "User Conflict Resolution: date_of_birth",
+    "actor": "user",
+    "timestamp": 1790054175.181516,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "field_id": "date_of_birth",
+      "resolved_value": "24/08/2007",
+      "source": "Aadhaar"
+    },
+    "status": "USER_RESOLVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "14dc4ac8c35c664b3d106eb2b0410d59f1ac7cd4c5d10ab047867ed6fe768a9f",
+    "entry_hash": "ffb8b5fd8e6cb2be04083d21a158abd07c5406587094a0608cf878adabde5cf7"
+  },
+  {
+    "step_id": "PLAN_APPROVAL",
+    "action": "Plan Approval",
+    "actor": "user",
+    "timestamp": 1790054175.1868143,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "modifications": []
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "APPROVED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "ffb8b5fd8e6cb2be04083d21a158abd07c5406587094a0608cf878adabde5cf7",
+    "entry_hash": "2c092b6a94352b22d1a18b59ad532d1823e27e8adcf83ac59a838dcf17c937df"
+  },
+  {
+    "step_id": "ACT_001_PERSONAL",
+    "action": "Fill Personal Information",
+    "actor": "verifier",
+    "timestamp": 1790054175.1919408,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "portal_session_active",
+      "all_personal_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Personal Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Personal Details",
+      "session_id": "sess_0656387dc88b",
+      "data_submitted": {
+        "full_name": "M Vinayaka",
+        "date_of_birth": "24/08/2007",
+        "gender": "Male",
+        "category": null,
+        "email": null,
+        "phone_number": "8147208491"
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0656387dc88b",
+        "step_saved": "Personal Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number"
+        ],
+        "last_updated": 1790054175.1919167
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.191918
+    },
+    "postconditions": [
+      "status_200_ok",
+      "fields_persisted_in_portal"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number"
+      ],
+      "server_timestamp": 1790054175.1919167,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "2c092b6a94352b22d1a18b59ad532d1823e27e8adcf83ac59a838dcf17c937df",
+    "entry_hash": "4d25cb3d2c141f95778a17b529bd050cb62864179f38c49649af79145985af7f"
+  },
+  {
+    "step_id": "ACT_002_ACADEMIC",
+    "action": "Fill Academic Records",
+    "actor": "verifier",
+    "timestamp": 1790054175.1930616,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "portal_session_active",
+      "academic_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Academic Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Academic Details",
+      "session_id": "sess_0656387dc88b",
+      "data_submitted": {
+        "institution_name": "V V S HIGH SCHOOL K H B COLONY 7TH WARD. HARAPANAHALLI. VIJAYANAGARA, VIJAYANAGARA.S83131",
+        "roll_number": "25614662",
+        "tenth_percentage": "83.04",
+        "twelfth_percentage": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0656387dc88b",
+        "step_saved": "Academic Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage"
+        ],
+        "last_updated": 1790054175.1930363
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.1930377
+    },
+    "postconditions": [
+      "status_200_ok",
+      "academic_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage"
+      ],
+      "server_timestamp": 1790054175.1930363,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "4d25cb3d2c141f95778a17b529bd050cb62864179f38c49649af79145985af7f",
+    "entry_hash": "fbaa5bc5f881bdc6daf12d1a7914ce4b5bf5f777a15583b700c6c13981f53682"
+  },
+  {
+    "step_id": "ACT_003_FINANCIAL",
+    "action": "Fill Financial & Bank Information",
+    "actor": "verifier",
+    "timestamp": 1790054175.1941516,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "portal_session_active",
+      "income_evidence_verified"
+    ],
+    "command_or_operation": "portal_adapter.fill_step('Financial Details')",
+    "observation": {
+      "operation": "fill_step",
+      "step_name": "Financial Details",
+      "session_id": "sess_0656387dc88b",
+      "data_submitted": {
+        "annual_family_income": null,
+        "bank_name": null,
+        "bank_account_number": null,
+        "ifsc_code": null
+      },
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "session_id": "sess_0656387dc88b",
+        "step_saved": "Financial Details",
+        "persisted_fields": [
+          "full_name",
+          "date_of_birth",
+          "gender",
+          "category",
+          "email",
+          "phone_number",
+          "institution_name",
+          "roll_number",
+          "tenth_percentage",
+          "twelfth_percentage",
+          "annual_family_income",
+          "bank_name",
+          "bank_account_number",
+          "ifsc_code"
+        ],
+        "last_updated": 1790054175.1941311
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.1941326
+    },
+    "postconditions": [
+      "status_200_ok",
+      "financial_fields_persisted"
+    ],
+    "evidence": {
+      "http_status": 200,
+      "portal_confirmed_fields": [
+        "full_name",
+        "date_of_birth",
+        "gender",
+        "category",
+        "email",
+        "phone_number",
+        "institution_name",
+        "roll_number",
+        "tenth_percentage",
+        "twelfth_percentage",
+        "annual_family_income",
+        "bank_name",
+        "bank_account_number",
+        "ifsc_code"
+      ],
+      "server_timestamp": 1790054175.1941311,
+      "verified_by": "VerifierAgent.verify_field_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "fbaa5bc5f881bdc6daf12d1a7914ce4b5bf5f777a15583b700c6c13981f53682",
+    "entry_hash": "cad64d7144c6021d5e7fa75e2d526735c3b82d8ed96e40da49d58f10182f6eb0"
+  },
+  {
+    "step_id": "ACT_004_UPLOAD_AADHAAR",
+    "action": "Upload Identity Document (Aadhaar)",
+    "actor": "verifier",
+    "timestamp": 1790054175.1958776,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_aadhaar')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_aadhaar",
+      "file_name": "adharcard.jpeg",
+      "file_size_kb": 200.61,
+      "mime_type": "image/jpeg",
+      "dimensions": [
+        1378,
+        1600
+      ],
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_aadhaar' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_aadhaar",
+          "filename": "adharcard.jpeg",
+          "size_kb": 200.609375,
+          "mime_type": "image/jpeg",
+          "dimensions": [
+            1378,
+            1600
+          ],
+          "uploaded_at": 1790054175.195787,
+          "checksum": "9d5339d6af5663cdfb619cefe253c73e"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.1958
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "checksum_verified"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "9d5339d6af5663cdfb619cefe253c73e",
+      "on_disk_size_kb": 200.61,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "cad64d7144c6021d5e7fa75e2d526735c3b82d8ed96e40da49d58f10182f6eb0",
+    "entry_hash": "4a0a47a8ee75a9f6f2bfbe5bc3b31d24fc6508e1a17dfe19d080815d93e2d053"
+  },
+  {
+    "step_id": "ACT_005_UPLOAD_MARKSHEET",
+    "action": "Upload Academic Marksheet",
+    "actor": "verifier",
+    "timestamp": 1790054175.1972446,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_marksheet')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_marksheet",
+      "file_name": "marksheet.jpeg",
+      "file_size_kb": 99.03,
+      "mime_type": "image/jpeg",
+      "dimensions": [
+        790,
+        1104
+      ],
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_marksheet' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_marksheet",
+          "filename": "marksheet.jpeg",
+          "size_kb": 99.033203125,
+          "mime_type": "image/jpeg",
+          "dimensions": [
+            790,
+            1104
+          ],
+          "uploaded_at": 1790054175.1971548,
+          "checksum": "6ce5b6ee5bc00c93a11d34a745aaf415"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.1971686
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "checksum_verified"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "6ce5b6ee5bc00c93a11d34a745aaf415",
+      "on_disk_size_kb": 99.03,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "4a0a47a8ee75a9f6f2bfbe5bc3b31d24fc6508e1a17dfe19d080815d93e2d053",
+    "entry_hash": "8a8c1be579e0eda69f40ba987a82026b367a7fb05fa35280e07c597801f17db0"
+  },
+  {
+    "step_id": "ACT_006_UPLOAD_INCOME_CERT_ATTEMPT_1",
+    "action": "Upload Income Certificate",
+    "actor": "failure_analyzer",
+    "timestamp": 1790054175.198548,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_income_cert",
+      "file_name": "income_certificate.pdf",
+      "file_size_kb": 5863.78,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": false,
+        "status_code": 413,
+        "error": "PAYLOAD_TOO_LARGE",
+        "message": "Upload failed: File size (5863.8 KB) exceeds maximum portal limit of 2048 KB.",
+        "constraint": {
+          "max_kb": 2048.0,
+          "observed_kb": 5863.779296875
+        }
+      },
+      "status_code": 413,
+      "success": false,
+      "error": "PAYLOAD_TOO_LARGE",
+      "observed_at": 1790054175.1984427
+    },
+    "postconditions": [],
+    "evidence": {
+      "diagnosis": {
+        "failure_category": "UPLOAD_ERROR",
+        "root_cause": "File size exceeds maximum portal threshold",
+        "can_recover": true,
+        "proposed_strategy": "DOCUMENT_COMPRESSION",
+        "diagnostic_evidence": {
+          "status_code": 413,
+          "error_text": "Portal upload rejected with HTTP 413: Upload failed: File size (5863.8 KB) exceeds maximum portal limit of 2048 KB. Portal upload failed: PAYLOAD_TOO_LARGE On-disk file verification failed: {'valid': False, 'file_size_kb': 5863.78, 'size_valid': False, 'extension': '.pdf', 'extension_valid': True, 'dimensions': None, 'dimensions_valid': True} Upload failed: File size (5863.8 KB) exceeds maximum portal limit of 2048 KB. PAYLOAD_TOO_LARGE",
+          "observation": {
+            "operation": "upload_document",
+            "doc_type": "doc_income_cert",
+            "file_name": "income_certificate.pdf",
+            "file_size_kb": 5863.78,
+            "mime_type": "application/pdf",
+            "dimensions": null,
+            "response": {
+              "success": false,
+              "status_code": 413,
+              "error": "PAYLOAD_TOO_LARGE",
+              "message": "Upload failed: File size (5863.8 KB) exceeds maximum portal limit of 2048 KB.",
+              "constraint": {
+                "max_kb": 2048.0,
+                "observed_kb": 5863.779296875
+              }
+            },
+            "status_code": 413,
+            "success": false,
+            "error": "PAYLOAD_TOO_LARGE",
+            "observed_at": 1790054175.1984427
+          }
+        },
+        "attempt_number": 1
+      },
+      "verifier_errors": [
+        "Portal upload rejected with HTTP 413: Upload failed: File size (5863.8 KB) exceeds maximum portal limit of 2048 KB.",
+        "Portal upload failed: PAYLOAD_TOO_LARGE",
+        "On-disk file verification failed: {'valid': False, 'file_size_kb': 5863.78, 'size_valid': False, 'extension': '.pdf', 'extension_valid': True, 'dimensions': None, 'dimensions_valid': True}"
+      ]
+    },
+    "status": "FAILED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "FAILED",
+    "previous_hash": "8a8c1be579e0eda69f40ba987a82026b367a7fb05fa35280e07c597801f17db0",
+    "entry_hash": "35f0c94f9567a42b865834dc57d0192616b3b76a4632813075c688092b02b966"
+  },
+  {
+    "step_id": "ACT_006_UPLOAD_INCOME_CERT_REC_1",
+    "action": "Recovery: DOCUMENT_COMPRESSION",
+    "actor": "recovery_agent",
+    "timestamp": 1790054175.2500648,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "success": true,
+      "strategy_applied": "DOCUMENT_COMPRESSION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\compressed_income_certificate.pdf",
+        "compression_stats": {
+          "source_path": "E:\\ROX1\\backend\\sample_docs\\income_certificate.pdf",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\compressed_income_certificate.pdf",
+          "initial_size_kb": 5863.78,
+          "final_size_kb": 71.63,
+          "target_kb": 1800,
+          "verified": true
+        }
+      },
+      "message": "Document successfully compressed from 5863.78 KB to 71.63 KB."
+    },
+    "status": "RECOVERED",
+    "attempt": 1,
+    "recovery_details": {
+      "success": true,
+      "strategy_applied": "DOCUMENT_COMPRESSION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\compressed_income_certificate.pdf",
+        "compression_stats": {
+          "source_path": "E:\\ROX1\\backend\\sample_docs\\income_certificate.pdf",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\compressed_income_certificate.pdf",
+          "initial_size_kb": 5863.78,
+          "final_size_kb": 71.63,
+          "target_kb": 1800,
+          "verified": true
+        }
+      },
+      "message": "Document successfully compressed from 5863.78 KB to 71.63 KB."
+    },
+    "state_transition": null,
+    "verification_result": "",
+    "previous_hash": "35f0c94f9567a42b865834dc57d0192616b3b76a4632813075c688092b02b966",
+    "entry_hash": "6bd1d20dc3a9053b755562c545128e69fda100ece492bbcb9c4712fd2a38f454"
+  },
+  {
+    "step_id": "ACT_006_UPLOAD_INCOME_CERT",
+    "action": "Upload Income Certificate",
+    "actor": "verifier",
+    "timestamp": 1790054175.2532902,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "file_readable_on_disk",
+      "allowed_format_pdf"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_income_cert')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_income_cert",
+      "file_name": "compressed_income_certificate.pdf",
+      "file_size_kb": 71.63,
+      "mime_type": "application/pdf",
+      "dimensions": null,
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_income_cert' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_income_cert",
+          "filename": "compressed_income_certificate.pdf",
+          "size_kb": 71.62890625,
+          "mime_type": "application/pdf",
+          "dimensions": null,
+          "uploaded_at": 1790054175.2530894,
+          "checksum": "77b3f41d02b8d46ea9984665f24f60df"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.2531247
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "size_under_2048kb"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "77b3f41d02b8d46ea9984665f24f60df",
+      "on_disk_size_kb": 71.63,
+      "on_disk_dimensions": null,
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 2,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "6bd1d20dc3a9053b755562c545128e69fda100ece492bbcb9c4712fd2a38f454",
+    "entry_hash": "c99ea21edca1436646379e818f994cded2e89bf9186a990a513ab6ba3248d4d0"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO_ATTEMPT_1",
+    "action": "Upload Applicant Photograph",
+    "actor": "failure_analyzer",
+    "timestamp": 1790054175.2551556,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_photo",
+      "file_name": "photo.png",
+      "file_size_kb": 13.8,
+      "mime_type": "image/png",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "response": {
+        "success": false,
+        "status_code": 400,
+        "error": "FORMAT_DIMENSION_ERROR",
+        "message": "Upload rejected: Invalid format 'image/png' (Must be JPG/JPEG); Dimensions (1600, 1200) do not match strict requirement 200x230 pixels",
+        "required": {
+          "format": "JPEG",
+          "dimensions": [
+            200,
+            230
+          ],
+          "max_kb": 100
+        },
+        "observed": {
+          "format": "image/png",
+          "dimensions": [
+            1600,
+            1200
+          ],
+          "size_kb": 13.80078125
+        }
+      },
+      "status_code": 400,
+      "success": false,
+      "error": "FORMAT_DIMENSION_ERROR",
+      "observed_at": 1790054175.254953
+    },
+    "postconditions": [],
+    "evidence": {
+      "diagnosis": {
+        "failure_category": "FORMAT_ERROR",
+        "root_cause": "Image format or pixel dimensions violate portal specification",
+        "can_recover": true,
+        "proposed_strategy": "IMAGE_ADAPTATION",
+        "diagnostic_evidence": {
+          "status_code": 400,
+          "error_text": "Portal upload rejected with HTTP 400: Upload rejected: Invalid format 'image/png' (Must be JPG/JPEG); Dimensions (1600, 1200) do not match strict requirement 200x230 pixels Portal upload failed: FORMAT_DIMENSION_ERROR On-disk file verification failed: {'valid': False, 'file_size_kb': 13.8, 'size_valid': True, 'extension': '.png', 'extension_valid': True, 'dimensions': (1600, 1200), 'dimensions_valid': False} Upload rejected: Invalid format 'image/png' (Must be JPG/JPEG); Dimensions (1600, 1200) do not match strict requirement 200x230 pixels FORMAT_DIMENSION_ERROR",
+          "observation": {
+            "operation": "upload_document",
+            "doc_type": "doc_photo",
+            "file_name": "photo.png",
+            "file_size_kb": 13.8,
+            "mime_type": "image/png",
+            "dimensions": [
+              1600,
+              1200
+            ],
+            "response": {
+              "success": false,
+              "status_code": 400,
+              "error": "FORMAT_DIMENSION_ERROR",
+              "message": "Upload rejected: Invalid format 'image/png' (Must be JPG/JPEG); Dimensions (1600, 1200) do not match strict requirement 200x230 pixels",
+              "required": {
+                "format": "JPEG",
+                "dimensions": [
+                  200,
+                  230
+                ],
+                "max_kb": 100
+              },
+              "observed": {
+                "format": "image/png",
+                "dimensions": [
+                  1600,
+                  1200
+                ],
+                "size_kb": 13.80078125
+              }
+            },
+            "status_code": 400,
+            "success": false,
+            "error": "FORMAT_DIMENSION_ERROR",
+            "observed_at": 1790054175.254953
+          }
+        },
+        "attempt_number": 1
+      },
+      "verifier_errors": [
+        "Portal upload rejected with HTTP 400: Upload rejected: Invalid format 'image/png' (Must be JPG/JPEG); Dimensions (1600, 1200) do not match strict requirement 200x230 pixels",
+        "Portal upload failed: FORMAT_DIMENSION_ERROR",
+        "On-disk file verification failed: {'valid': False, 'file_size_kb': 13.8, 'size_valid': True, 'extension': '.png', 'extension_valid': True, 'dimensions': (1600, 1200), 'dimensions_valid': False}"
+      ]
+    },
+    "status": "FAILED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "FAILED",
+    "previous_hash": "c99ea21edca1436646379e818f994cded2e89bf9186a990a513ab6ba3248d4d0",
+    "entry_hash": "c6e15938f7e19cf038b073e969dcc692e2c0dcb1f9aeff16785490e0b8e319b0"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO_REC_1",
+    "action": "Recovery: IMAGE_ADAPTATION",
+    "actor": "recovery_agent",
+    "timestamp": 1790054175.2805781,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "success": true,
+      "strategy_applied": "IMAGE_ADAPTATION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\photo_adapted.jpg",
+        "adaptation_stats": {
+          "source_path": "E:\\ROX1\\backend\\sample_docs\\photo.png",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\photo_adapted.jpg",
+          "verified": true,
+          "output_format": "JPEG",
+          "dimensions": {
+            "width": 200,
+            "height": 230
+          },
+          "file_size_kb": 3.84,
+          "quality_applied": 90
+        }
+      },
+      "message": "Image adapted: Converted to JPEG, resized to 200x230, compressed to 3.84 KB."
+    },
+    "status": "RECOVERED",
+    "attempt": 1,
+    "recovery_details": {
+      "success": true,
+      "strategy_applied": "IMAGE_ADAPTATION",
+      "adapted_data": {
+        "new_file_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\photo_adapted.jpg",
+        "adaptation_stats": {
+          "source_path": "E:\\ROX1\\backend\\sample_docs\\photo.png",
+          "output_path": "E:\\ROX1\\backend\\storage\\adapted\\APP_4EA48666\\photo_adapted.jpg",
+          "verified": true,
+          "output_format": "JPEG",
+          "dimensions": {
+            "width": 200,
+            "height": 230
+          },
+          "file_size_kb": 3.84,
+          "quality_applied": 90
+        }
+      },
+      "message": "Image adapted: Converted to JPEG, resized to 200x230, compressed to 3.84 KB."
+    },
+    "state_transition": null,
+    "verification_result": "",
+    "previous_hash": "c6e15938f7e19cf038b073e969dcc692e2c0dcb1f9aeff16785490e0b8e319b0",
+    "entry_hash": "7ec56e61a4dfb4851939d6756c8c94d07b5cef7ade7f1a51486a4cb154d84b6a"
+  },
+  {
+    "step_id": "ACT_007_UPLOAD_PHOTO",
+    "action": "Upload Applicant Photograph",
+    "actor": "verifier",
+    "timestamp": 1790054175.2827952,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "file_readable_on_disk"
+    ],
+    "command_or_operation": "portal_adapter.upload_document('doc_photo')",
+    "observation": {
+      "operation": "upload_document",
+      "doc_type": "doc_photo",
+      "file_name": "photo_adapted.jpg",
+      "file_size_kb": 3.84,
+      "mime_type": "image/jpeg",
+      "dimensions": [
+        200,
+        230
+      ],
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Document 'doc_photo' successfully uploaded and verified by portal.",
+        "doc_record": {
+          "doc_type": "doc_photo",
+          "filename": "photo_adapted.jpg",
+          "size_kb": 3.8408203125,
+          "mime_type": "image/jpeg",
+          "dimensions": [
+            200,
+            230
+          ],
+          "uploaded_at": 1790054175.2825625,
+          "checksum": "6c7682dd214e08dbc343e94df876aa61"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "error": null,
+      "observed_at": 1790054175.282575
+    },
+    "postconditions": [
+      "portal_accepted_upload",
+      "format_jpg",
+      "dimensions_200x230"
+    ],
+    "evidence": {
+      "portal_accepted": true,
+      "portal_checksum": "6c7682dd214e08dbc343e94df876aa61",
+      "on_disk_size_kb": 3.84,
+      "on_disk_dimensions": [
+        200,
+        230
+      ],
+      "verified_by": "VerifierAgent.verify_upload_action"
+    },
+    "status": "VERIFIED",
+    "attempt": 2,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "7ec56e61a4dfb4851939d6756c8c94d07b5cef7ade7f1a51486a4cb154d84b6a",
+    "entry_hash": "0f628a3d3dcd2f8666cac71afda62014a00c947e56d14fc710904550ad7087c2"
+  },
+  {
+    "step_id": "SUBMISSION_USER_APPROVAL",
+    "action": "Irreversible Action Authorization",
+    "actor": "user",
+    "timestamp": 1790054175.2952244,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {},
+    "postconditions": [],
+    "evidence": {
+      "user_confirmed": true
+    },
+    "status": "AUTHORIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0f628a3d3dcd2f8666cac71afda62014a00c947e56d14fc710904550ad7087c2",
+    "entry_hash": "baf7b23c52dd2bb433e643d317ca0ddf53e5432a2595e48f24b87863ea3e689e"
+  },
+  {
+    "step_id": "ACT_008_FINAL_SUBMISSION",
+    "action": "Submit Final Application & Obtain Verifiable Receipt",
+    "actor": "verifier",
+    "timestamp": 1790054175.3026187,
+    "formatted_time": "10:46:15",
+    "preconditions": [
+      "user_approval_granted",
+      "all_fields_verified",
+      "all_documents_uploaded"
+    ],
+    "command_or_operation": "portal_adapter.submit_application()",
+    "observation": {
+      "operation": "submit_application",
+      "session_id": "sess_0656387dc88b",
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Application submitted and verified successfully.",
+        "reference_number": "SCH-2026-19081",
+        "receipt": {
+          "application_id": "sess_0656387dc88b",
+          "reference_number": "SCH-2026-19081",
+          "portal_status": "Submitted",
+          "submitted_at": 1790054175.3025103,
+          "candidate_name": "M Vinayaka",
+          "category": null,
+          "income": null,
+          "verified_documents_count": 4,
+          "receipt_hash": "7d47634db80a2cd2625b85d44b8a9f5e7d647a39950b9ca8637405b56d048a33"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "reference_number": "SCH-2026-19081",
+      "receipt": {
+        "application_id": "sess_0656387dc88b",
+        "reference_number": "SCH-2026-19081",
+        "portal_status": "Submitted",
+        "submitted_at": 1790054175.3025103,
+        "candidate_name": "M Vinayaka",
+        "category": null,
+        "income": null,
+        "verified_documents_count": 4,
+        "receipt_hash": "7d47634db80a2cd2625b85d44b8a9f5e7d647a39950b9ca8637405b56d048a33"
+      },
+      "observed_at": 1790054175.3025522
+    },
+    "postconditions": [
+      "status_200_ok",
+      "valid_reference_number",
+      "portal_status_submitted",
+      "receipt_hash_verified"
+    ],
+    "evidence": {
+      "reference_number": "SCH-2026-19081",
+      "portal_status": "Submitted",
+      "submitted_at": 1790054175.3025103,
+      "receipt_hash": "7d47634db80a2cd2625b85d44b8a9f5e7d647a39950b9ca8637405b56d048a33",
+      "hash_verified": true,
+      "candidate_name": "M Vinayaka",
+      "verified_by": "VerifierAgent.verify_final_submission"
+    },
+    "status": "VERIFIED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "baf7b23c52dd2bb433e643d317ca0ddf53e5432a2595e48f24b87863ea3e689e",
+    "entry_hash": "97d9bae0ed57347ef109b3bb8fca5cd6a130c9e94271ba4b7f2f01596e6b6c87"
+  },
+  {
+    "step_id": "FINAL_VERIFIED_SUCCESS",
+    "action": "Evidence Gate Final Certification",
+    "actor": "evidence_gate",
+    "timestamp": 1790054175.3053713,
+    "formatted_time": "10:46:15",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "operation": "submit_application",
+      "session_id": "sess_0656387dc88b",
+      "response": {
+        "success": true,
+        "status_code": 200,
+        "message": "Application submitted and verified successfully.",
+        "reference_number": "SCH-2026-19081",
+        "receipt": {
+          "application_id": "sess_0656387dc88b",
+          "reference_number": "SCH-2026-19081",
+          "portal_status": "Submitted",
+          "submitted_at": 1790054175.3025103,
+          "candidate_name": "M Vinayaka",
+          "category": null,
+          "income": null,
+          "verified_documents_count": 4,
+          "receipt_hash": "7d47634db80a2cd2625b85d44b8a9f5e7d647a39950b9ca8637405b56d048a33"
+        }
+      },
+      "status_code": 200,
+      "success": true,
+      "reference_number": "SCH-2026-19081",
+      "receipt": {
+        "application_id": "sess_0656387dc88b",
+        "reference_number": "SCH-2026-19081",
+        "portal_status": "Submitted",
+        "submitted_at": 1790054175.3025103,
+        "candidate_name": "M Vinayaka",
+        "category": null,
+        "income": null,
+        "verified_documents_count": 4,
+        "receipt_hash": "7d47634db80a2cd2625b85d44b8a9f5e7d647a39950b9ca8637405b56d048a33"
+      },
+      "observed_at": 1790054175.3025522
+    },
+    "postconditions": [],
+    "evidence": {
+      "reference_number": "SCH-2026-19081",
+      "portal_status": "submitted",
+      "submitted_at": 1790054175.3025103
+    },
+    "status": "VERIFIED_SUCCESS",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "GATE_PASSED",
+    "previous_hash": "97d9bae0ed57347ef109b3bb8fca5cd6a130c9e94271ba4b7f2f01596e6b6c87",
+    "entry_hash": "3b0d4c71b6b6c9ccb41dfe895e9fbe3afee77b844814bcba80b86397bd537c98"
+  }
+]

@@ -1,0 +1,403 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790057118.3939402,
+    "formatted_time": "11:35:18",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_714188e023de",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "c18c4628dedde55a4cb01a6ff4fb1dfc5963875e1a740dc7dc0f2b81e7596ae9"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790057185.1320496,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 4,
+      "ingested_documents": 5
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Legal Name",
+          "value": "M Vinayaka",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Candidate's Name : ) Father's Name : M VINAYAKA M PRAKASH Mother's Name",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth",
+          "value": "24/08/2007",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "24-08-2007 TWENTY",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "BOY",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": "OBC (Category II-B)",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Category 1 1 (B)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "email": {
+          "field_id": "email",
+          "label": "Email Address",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "phone_number": {
+          "field_id": "phone_number",
+          "label": "Mobile Phone",
+          "value": "8147208491",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Mobile: 8147208491",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Current Institution Name",
+          "value": "VEERA SHAIVA VIDYAVARDHAKA SANGHA HIGH SCHOOL A D B COLLEGE CAMPUS HARAPANAHALLY VIJAYANAGARA DIST s",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "SCHOOL NAME VEERA SHAIVA VIDYAVARDHAKA SANGHA HIGH SCHOOL A D B COLLEGE CAMPUS HARAPANAHALLY VIJAYAN",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "roll_number": {
+          "field_id": "roll_number",
+          "label": "Student Roll Number",
+          "value": "23674676",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "23674676",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "tenth_percentage": {
+          "field_id": "tenth_percentage",
+          "label": "10th Grade Percentage / CGPA",
+          "value": "93.6",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "(93.6%)",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "twelfth_percentage": {
+          "field_id": "twelfth_percentage",
+          "label": "12th Grade Percentage / CGPA",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "annual_family_income": {
+          "field_id": "annual_family_income",
+          "label": "Annual Family Income (INR)",
+          "value": "50000",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "annual income is Rs. 50000",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_name": {
+          "field_id": "bank_name",
+          "label": "Bank Name",
+          "value": "Canara Bank",
+          "status": "VERIFIED",
+          "source_file": "bankpassbook.jpeg",
+          "source_page": 1,
+          "evidence_text": "Canara Bank",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "bank_account_number": {
+          "field_id": "bank_account_number",
+          "label": "Bank Account Number",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "ifsc_code": {
+          "field_id": "ifsc_code",
+          "label": "IFSC Code",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "doc_aadhaar": {
+          "field_id": "doc_aadhaar",
+          "label": "Identity Proof (Aadhaar)",
+          "value": "adharcard.jpeg",
+          "status": "VERIFIED",
+          "source_file": "adharcard.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: adharcard.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_marksheet": {
+          "field_id": "doc_marksheet",
+          "label": "Academic Marksheet",
+          "value": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_income_cert": {
+          "field_id": "doc_income_cert",
+          "label": "Income Certificate",
+          "value": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "status": "VERIFIED",
+          "source_file": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        },
+        "doc_photo": {
+          "field_id": "doc_photo",
+          "label": "Applicant Photograph",
+          "value": "photo.jpeg",
+          "status": "VERIFIED",
+          "source_file": "photo.jpeg",
+          "source_page": 1,
+          "evidence_text": "Matched document file: photo.jpeg",
+          "confidence": 0.98,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [],
+      "unresolved_conflicts_count": 0
+    },
+    "status": "AWAITING_APPROVAL",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "c18c4628dedde55a4cb01a6ff4fb1dfc5963875e1a740dc7dc0f2b81e7596ae9",
+    "entry_hash": "d2d0a192115c031f36de1d334ee6373f5c2a752865ba2a87c9d4b07f5ffccb17"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790057185.213078,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+      "converted": "WhatsApp Image 2026-09-17 at 2.35.09 PM.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\WhatsApp Image 2026-09-17 at 2.35.09 PM.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\WhatsApp Image 2026-09-17 at 2.35.09 PM.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 193.42,
+      "final_size_kb": 249.06,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "d2d0a192115c031f36de1d334ee6373f5c2a752865ba2a87c9d4b07f5ffccb17",
+    "entry_hash": "68650323ba17c3ecff99ed9f6af1ecf0f79df85276a458c3201faad4dd069b29"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_ADHARCARD.JPEG",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790057185.2922633,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "adharcard.jpeg",
+      "converted": "adharcard.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\adharcard.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\adharcard.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 200.61,
+      "final_size_kb": 247.69,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "68650323ba17c3ecff99ed9f6af1ecf0f79df85276a458c3201faad4dd069b29",
+    "entry_hash": "f0860d0e67d560ff136ec57e7e704519abacf824854f6823916b117e7a467a32"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_WHATSAPP IMAGE 2026-",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790057185.342182,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+      "converted": "WhatsApp Image 2026-09-17 at 2.38.15 PM.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\WhatsApp Image 2026-09-17 at 2.38.15 PM.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\WhatsApp Image 2026-09-17 at 2.38.15 PM.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 124.84,
+      "final_size_kb": 156.41,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "f0860d0e67d560ff136ec57e7e704519abacf824854f6823916b117e7a467a32",
+    "entry_hash": "ecf5aaf23bc355ef544375e33138375305c459697b5027487197928d1b3d7ef2"
+  },
+  {
+    "step_id": "ADAPT_IMAGE_PHOTO.JPEG",
+    "action": "Self-Healing Document Adaptation: Image Format & Resize",
+    "actor": "document_engine",
+    "timestamp": 1790057185.435807,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "photo.jpeg",
+      "converted": "photo.jpg"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\photo.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\photo.jpg",
+      "verified": true,
+      "output_format": "JPEG",
+      "dimensions": {
+        "width": 200,
+        "height": 230
+      },
+      "file_size_kb": 11.86,
+      "quality_applied": 90
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "ecf5aaf23bc355ef544375e33138375305c459697b5027487197928d1b3d7ef2",
+    "entry_hash": "4968921162341db4f4aad987c69ba3b2b50d802335cb57ef43cf277ff6c48ff5"
+  },
+  {
+    "step_id": "ADAPT_IMG2PDF_BANKPASSBOOK.JPEG",
+    "action": "Self-Healing Document Adaptation: Convert Image to PDF",
+    "actor": "document_engine",
+    "timestamp": 1790057185.4584033,
+    "formatted_time": "11:36:25",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "original": "bankpassbook.jpeg",
+      "converted": "bankpassbook.pdf"
+    },
+    "postconditions": [],
+    "evidence": {
+      "source_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\bankpassbook.jpeg",
+      "output_path": "E:\\ROX1\\backend\\storage\\uploads\\APP_843AEE73\\bankpassbook.pdf",
+      "source_format": "JPEG",
+      "output_format": "PDF",
+      "initial_size_kb": 50.25,
+      "final_size_kb": 64.15,
+      "verified": true
+    },
+    "status": "ADAPTED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "4968921162341db4f4aad987c69ba3b2b50d802335cb57ef43cf277ff6c48ff5",
+    "entry_hash": "6c8c9dfaa2a59bffacc1f8d541f535e9adb60eefb0020345f625d9323017fc0b"
+  }
+]

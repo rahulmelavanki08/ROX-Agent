@@ -1,0 +1,283 @@
+[
+  {
+    "step_id": "INIT_001",
+    "action": "Application Initialized",
+    "actor": "user",
+    "timestamp": 1790061792.4692478,
+    "formatted_time": "12:53:12",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "portal_session_id": "sess_45e9f7d2d4eb",
+      "url": "http://127.0.0.1:8000/portal",
+      "application_type": "scholarship_sbi"
+    },
+    "postconditions": [],
+    "evidence": {},
+    "status": "INITIALIZED",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "entry_hash": "995828e074460aa17390bd502af27924d5a927e209bf997d4e881a7075ce5e2d"
+  },
+  {
+    "step_id": "ANALYSIS_001",
+    "action": "Requirement and Document Analysis",
+    "actor": "mapping_agent",
+    "timestamp": 1790061800.6266716,
+    "formatted_time": "12:53:20",
+    "preconditions": [],
+    "command_or_operation": "",
+    "observation": {
+      "sections": 3,
+      "ingested_documents": 1
+    },
+    "postconditions": [],
+    "evidence": {
+      "mapped_fields": {
+        "full_name": {
+          "field_id": "full_name",
+          "label": "Full Name",
+          "value": "Rahul Melavanki",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Rahul Melavanki",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "dob": {
+          "field_id": "dob",
+          "label": "Date of Birth",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "gender": {
+          "field_id": "gender",
+          "label": "Gender",
+          "value": "Male",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Male",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "institution_name": {
+          "field_id": "institution_name",
+          "label": "Institution Name",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "current_course": {
+          "field_id": "current_course",
+          "label": "Current Course",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "percentage_marks": {
+          "field_id": "percentage_marks",
+          "label": "Percentage / CGPA",
+          "value": null,
+          "status": "USER_INPUT_REQUIRED",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "income_certificate": {
+          "field_id": "income_certificate",
+          "label": "Family Income Certificate",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "academic_marksheet": {
+          "field_id": "academic_marksheet",
+          "label": "Previous Year Marksheet",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "custom_certificate": {
+          "field_id": "custom_certificate",
+          "label": "Custom Supporting Certificate",
+          "value": null,
+          "status": "MISSING",
+          "source_file": null,
+          "source_page": 1,
+          "evidence_text": null,
+          "confidence": 0.0,
+          "conflict_details": null
+        },
+        "date_of_birth": {
+          "field_id": "date_of_birth",
+          "label": "Date of Birth",
+          "value": "14/05/2007",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Date of Birth / Janma Dina: 14/05/2007",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "category": {
+          "field_id": "category",
+          "label": "Social Category",
+          "value": "General",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Category: General",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "aadhaar_number": {
+          "field_id": "aadhaar_number",
+          "label": "Aadhaar Number",
+          "value": "XXXX-XXXX-9481",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Aadhaar Number: XXXX-XXXX-9481",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "address": {
+          "field_id": "address",
+          "label": "Address",
+          "value": "#104, 3rd Cross, 5th Main, Koramangala 4th Block, Bengaluru, Karnataka, India - 560034",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Address:\n#104, 3rd Cross, 5th Main,",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "state": {
+          "field_id": "state",
+          "label": "State",
+          "value": "Karnataka",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Karnataka",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "pincode": {
+          "field_id": "pincode",
+          "label": "Pincode",
+          "value": "560034",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "560034",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "certificate_number": {
+          "field_id": "certificate_number",
+          "label": "Verified Biometric ID",
+          "value": "CERT-UID-2024-889104",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "CERT-UID-2024-889104",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "issuing_authority": {
+          "field_id": "issuing_authority",
+          "label": "Issuing Authority",
+          "value": "UNIQUE IDENTIFICATION AUTHORITY OF INDIA",
+          "status": "VERIFIED",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "UNIQUE IDENTIFICATION AUTHORITY OF INDIA",
+          "confidence": 0.99,
+          "conflict_details": null
+        },
+        "name__naam": {
+          "field_id": "name__naam",
+          "label": "Name  Naam",
+          "value": "Rahul Melavanki",
+          "status": "LIKELY",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Name / Naam: Rahul Melavanki",
+          "confidence": 0.9,
+          "conflict_details": null
+        },
+        "gender__linga": {
+          "field_id": "gender__linga",
+          "label": "Gender  Linga",
+          "value": "Male / Purush",
+          "status": "LIKELY",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Gender / Linga: Male / Purush",
+          "confidence": 0.9,
+          "conflict_details": null
+        },
+        "social_category": {
+          "field_id": "social_category",
+          "label": "Social Category",
+          "value": "General",
+          "status": "LIKELY",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Social Category: General",
+          "confidence": 0.9,
+          "conflict_details": null
+        },
+        "verified_biometric_id": {
+          "field_id": "verified_biometric_id",
+          "label": "Verified Biometric Id",
+          "value": "CERT-UID-2024-889104",
+          "status": "LIKELY",
+          "source_file": "my_custom_identity_proof.pdf",
+          "source_page": 1,
+          "evidence_text": "Verified Biometric ID: CERT-UID-2024-889104",
+          "confidence": 0.9,
+          "conflict_details": null
+        }
+      },
+      "conflicts": [],
+      "unresolved_conflicts_count": 0
+    },
+    "status": "AWAITING_APPROVAL",
+    "attempt": 1,
+    "recovery_details": null,
+    "state_transition": null,
+    "verification_result": "PASSED",
+    "previous_hash": "995828e074460aa17390bd502af27924d5a927e209bf997d4e881a7075ce5e2d",
+    "entry_hash": "f7f52720234a269179451451f39cf4287da4875b56b662639471e3863b23e70c"
+  }
+]
